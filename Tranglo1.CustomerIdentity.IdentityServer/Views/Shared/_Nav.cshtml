@@ -1,0 +1,57 @@
+﻿@using IdentityServer4.Extensions
+
+@{
+    string name = null;
+    if (!true.Equals(ViewData["signed-out"]))
+    {
+        name = Context.User?.GetDisplayName();
+    }
+}
+
+<div class="nav-page">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+		<a href="~/" class="navbar-brand">
+			<img src="~/icon.png" class="icon-banner">
+			IdentityServer4
+		</a>
+
+		@if (!string.IsNullOrWhiteSpace(name))
+		{
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">@name <b class="caret"></b></a>
+
+					<div class="dropdown-menu">
+						<a class="dropdown-item" asp-action="Logout" asp-controller="Account">Logout</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account Management</a>
+					<div class="dropdown-menu">
+						@*https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/anchor-tag-helper?view=aspnetcore-3.1*@
+						<a class="dropdown-item" asp-page="/Account/Manage/GenerateRecoveryCodes" asp-area="Identity">Generate Recovery Codes</a>
+						<a class="dropdown-item" asp-page="/Account/Manage/EnableAuthenticator" asp-area="Identity">Enable Authenticator</a>
+						<a class="dropdown-item" asp-page="/Account/Manage/ShowRecoveryCodes" asp-area="Identity">Show Recovery Codes</a>
+						<a class="dropdown-item" asp-page="/Account/Manage/ResetAuthenticator" asp-area="Identity">Reset Authenticator</a>
+						<a class="dropdown-item" asp-page="/Account/Manage/Disable2fa" asp-area="Identity">Disable 2fa</a>
+						<a class="dropdown-item" asp-page="/Account/Manage/DeletePersonalData" asp-area="Identity">Delete Personal Data</a>
+						<a class="dropdown-item" asp-page="/Account/Manage/DownloadPersonalData" asp-area="Identity">Download Personal Data</a>
+					</div>
+				</li>
+			</ul>
+		}
+		else
+		{
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+			<a class="nav-link" asp-area="Identity" asp-page="/Account/Register" asp-host="localhost:4001" asp-protocol="https">Register</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" id="login" asp-controller="Account" asp-action="Login">Login</a>
+		</li>
+	</ul>
+		}
+
+		</nav>
+</div>

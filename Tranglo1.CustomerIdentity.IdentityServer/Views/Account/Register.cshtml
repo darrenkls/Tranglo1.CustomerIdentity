@@ -1,0 +1,940 @@
+﻿@model RegisterViewModel
+@inject Tranglo1.CustomerIdentity.IdentityServer.Services.Recaptcha.RecaptchaKey RecaptchaKey
+<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+<link rel="stylesheet" href="~/assets/css/tranglo/style.css" asp-append-version="true" />
+
+<script>
+    gtag('event', 'view_Signup')
+</script>
+
+<div class="row vh-100 me-0">
+    <div class="col-md-6 d-sm-none d-xs-none d-lg-block ms-0">
+        <div class="background-image-tranglo">
+            <img src="/assets/images/tranglo-logo-2.svg" class="tranglo-logo" />
+            <img src="/assets/images/extra-logo-tranglo-front-screen.svg" class="tranglo-extra-logo" />
+        </div>
+    </div>
+    <div class="col" style="max-height: 100vh; overflow: auto;">
+        @*body*@
+        <div class="row tranglo-body">
+            <div class="col">
+                <form method="post" asp-action="Register" asp-controller="Account" name="registration" id="registrationForm" asp-antiforgery="true" novalidate>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-8 mt-5">
+                            <div class="row d-flex justify-content-center">
+                                <div id="backButton" class="col-1 mt-2 mb-2" style="display: none;">
+                                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-11 mt-2 mb-2 d-flex justify-content-center">
+                                    <div class="headline text-center">@Html.Raw("Create your Tranglo<br>account")</div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <br>
+                                <div class="col-12 mt-2 mb-2 d-flex justify-content-center" id="i-have-a-code">
+                                    <input type="hidden" asp-for="RecaptchaToken" id="recaptcha-token" />
+                                    <input type="hidden" asp-for="CustomerTypes" />
+                                    <input type="hidden" asp-for="FormType" value="0" />
+
+                                    <input type="checkbox" asp-for="HasSignUpCode" class="me-2" />
+                                    <label class="d-flex align-items-center">
+                                        <div class="body-1">
+                                            I have a signup code
+                                            <i class="fas fa-info-circle ms-2" title="The signup code is a unique code that Tranglo sends to your email."
+                                               style="color: #16bcef; background-color: white"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="registrationFormFields" style="display: none;">
+                                <div id="registryCodeRow" class="row">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="mdc-text-field mdc-text-field--outlined w-100">
+                                            <input class="mdc-text-field__input" asp-for="RegistryCode" autocomplete="off">
+                                            <div class="mdc-notched-outline">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch">
+                                                    <label for="RegistryCode" class="mdc-floating-label">Signup Code</label>
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                        </div>
+                                        <div id="RegistryCodeFeedback" class="caption ms-1"><span asp-validation-for="RegistryCode"></span></div>
+                                    </div>
+                                </div>
+
+                                <div id="companyNameRow" class="row">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="mdc-text-field mdc-text-field--outlined w-100">
+                                            <input class="mdc-text-field__input" asp-for="CompanyName" autocomplete="off">
+                                            <div class="mdc-notched-outline">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch">
+                                                    <label id="CompanyNameFloat" for="CompanyName" class="mdc-floating-label">Company Name</label>
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                        </div>
+                                        <div id="CompanyNameFeedback" class="caption ms-1"><span asp-validation-for="CompanyName"></span></div>
+                                    </div>
+                                </div>
+
+                                <div id="fullNameRow" class="row">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="mdc-text-field mdc-text-field--outlined w-100">
+                                            <input class="mdc-text-field__input" asp-for="FullName" autocomplete="off">
+                                            <div class="mdc-notched-outline">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch">
+                                                    <label for="FullName" class="mdc-floating-label">Contact person's full name</label>
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                        </div>
+                                        <div id="NameFeedback" class="caption ms-1"><span asp-validation-for="FullName"></span></div>
+                                    </div>
+                                </div>
+
+                                <div id="countryRow" class="row">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div id="countrySelect" class="mdc-select mdc-select--outlined w-100">
+                                            <div class="mdc-select__anchor" role="button" aria-haspopup="listbox">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label">Country of incorporation</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <span class="mdc-select__selected-text mdc-select__selected-text--primary"></span>
+                                                <span class="mdc-select__dropdown-icon">
+                                                    <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+                                                        <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
+                                                        <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
+                                                    </svg>
+                                                </span>
+                                            </div>
+
+                                            <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+                                                <ul class="mdc-list" role="listbox">
+                                                    @foreach (var type in Model.Countries)
+                                                    {
+                                                        <li class="mdc-list-item ms-3 p-1" data-value="@type.CountryISO2" role="option">
+                                                            <span class="mdc-list-item__text">@type.Description</span>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="CountryFeedback" class="caption ms-1"><span asp-validation-for="CountryISO2"></span></div>
+                                        <input asp-for="CountryISO2" id="CountryISO2" type="hidden" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="mdc-text-field mdc-text-field--outlined w-100">
+                                            <input class="mdc-text-field__input" asp-for="Email" autocomplete="new-email">
+                                            <div class="mdc-notched-outline">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch">
+                                                    <label for="Email" class="mdc-floating-label">Email</label>
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                        </div>
+                                        <div id="EmailFeedback" class="caption ms-1"><span asp-validation-for="Email"></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 col-xs-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2">
+                                        <div class="mdc-text-field mdc-text-field--outlined w-100">
+                                            <input class="mdc-text-field__input" asp-for="Password" autocomplete="new-password" type="password">
+                                            <i id="peekPassword" class="material-symbols-outlined eye-icon">visibility</i>
+                                            <div class="mdc-notched-outline">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch">
+                                                    <label for="Password" class="mdc-floating-label">Password</label>
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                        </div>
+                                        <div id="passwordFeedback" class="caption ms-1"></div>
+                                    </div>
+                                    <div class="col-12 col-xs-12 col-md-6 col-lg-6 col-xl-6 mt-2 mb-2">
+                                        <div class="mdc-text-field mdc-text-field--outlined w-100">
+                                            <input class="mdc-text-field__input" asp-for="ConfirmPassword" autocomplete="off" type="password">
+                                            <i id="peekConfirmPassword" class="material-symbols-outlined eye-icon">visibility</i>
+                                            <div class="mdc-notched-outline">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch">
+                                                    <label for="ConfirmPassword" class="mdc-floating-label">Confirm Password</label>
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                        </div>
+                                        <div id="ConfirmPasswordFeedback" class="caption ms-1"><span asp-validation-for="ConfirmPassword"></span></div>
+
+                                    </div>
+                                </div>
+
+                                <div id="leadsOriginRow" class="row">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div id="leadsOriginSelect" class="mdc-select mdc-select--outlined w-100">
+                                            <div class="mdc-select__anchor" role="button" aria-haspopup="listbox">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label">How did you find us</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <span class="mdc-select__selected-text mdc-select__selected-text--primary"></span>
+                                                <span class="mdc-select__dropdown-icon">
+                                                    <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+                                                        <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
+                                                        <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
+                                                    </svg>
+                                                </span>
+                                            </div>
+
+                                            <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+                                                <ul class="mdc-list" role="listbox">
+                                                    @foreach (var type in Model.PartnerRegistrationLeadsOrigin)
+                                                    {
+                                                        <li class="mdc-list-item ms-3 p-1" data-value="@type.PartnerRegistrationLeadsOriginCode" role="option">
+                                                            <span class="mdc-list-item__text">@type.Description</span>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="OriginFeedback" class="caption ms-1"><span asp-validation-for="PartnerRegistrationLeadsOriginCode"></span></div>
+                                        <input type="hidden" asp-for="PartnerRegistrationLeadsOriginCode" id="leadsOrigin" />
+                                    </div>
+                                </div>
+
+                                <div class="row" id="otherLeadsOriginRow" style="display: none;">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="mdc-text-field mdc-text-field--outlined w-100">
+                                            <input class="mdc-text-field__input" asp-for="OtherLeadsOrigin" id="OtherLeadsOrigin">
+                                            <div class="mdc-notched-outline">
+                                                <div class="mdc-notched-outline__leading"></div>
+                                                <div class="mdc-notched-outline__notch">
+                                                    <label for="OtherLeadsOrigin" class="mdc-floating-label">Please specify...</label>
+                                                </div>
+                                                <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                        </div>
+                                        <div id="OtherLeadsOriginFeedback" class="caption ms-1"><span asp-validation-for="OtherLeadsOrigin"></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 mt-2 mb-2 d-flex justify-content-center">
+                                        <ul class="navbar-nav flex-direction-row">
+                                            <li class="nav-item">
+                                                <input type="checkbox" asp-for="IsTermsAndConditionReadAgreed" class="me-2" />
+                                            </li>
+                                            <li class="nav-item">
+                                                <div>By creating an account, you agree to our <a class="ms-1" href="javascript:void(0)" data-toggle="modal" data-target="#scrollable-modal">Privacy &amp; Terms.</a></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="TOCfeedback" class="text-center"><span asp-validation-for="IsTermsAndConditionReadAgreed" class="text-danger"></span></div>
+                                </div>
+                            </div>
+
+                            <input type="text" asp-for="SolutionCode" hidden />
+                            <div id="solutionChooser">
+                                <div class="row">
+                                    <div class="col-12 mt-2 mb-2">
+                                        <div class="row">
+                                            <div class="col-12 mt-2 mb-2 d-flex justify-content-center">
+                                                <div class="body-1">Please select a solution</div>
+                                            </div>
+                                        </div>
+                                        <div class="row button-group d-flex justify-content-center">
+                                            <div class="col-8 mt-2 mb-2 d-flex justify-content-center">
+                                                <button type="button" id="connect" class="toggle-button tranglo-button form-control w-auto text-start p-3">
+                                                    <img src="/assets/images/tranglo-connect-logo.svg" /><br />
+                                                    <div class="body-1">
+                                                        Cross-border payment solution for Money Service Business (MSB) licensees.
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row button-group d-flex justify-content-center">
+                                            <div class="col-8 mt-2 mb-2 d-flex justify-content-center">
+                                                <button type="button" id="business" class="toggle-button tranglo-button form-control w-auto text-start p-3">
+                                                    <img src="/assets/images/tranglo-business-logo.svg" />
+                                                    <span class="tick-mark"><i class="fa fa-check"></i></span><br />
+                                                    <div class="body-1">
+                                                        Collection and payout solution for non-MSB companies and merchants.
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="businessDropdown" style="display: none;">
+                                <div class="row justify-content-center">
+                                    <div class="col-8 mt-2 mb-2">
+                                        <div class="floating-label-wrapper">
+                                            <select asp-for="CustomerTypeCode" class="form-select" id="CustomerTypeCode" aria-label="Business Type">
+                                                <option value="" hidden>Corporate</option>
+                                                @foreach (var type in Model.CustomerTypes)
+                                                {
+                                                    <option value="@type.CustomerTypeCode" data-descripion="@type.Description">@type.DescriptionExternal</option>
+                                                }
+                                            </select>
+                                            <label for="CustomerTypeCode">Business Type</label>
+                                        </div>
+
+                                        <!-- Remove the Corporate Mass Payout (5) & Remittance MSB (4) & Crypto (3) & Individual (1) from the dropdown list -->
+                                        <script>
+                                            var dropdown = document.getElementById("CustomerTypeCode");
+
+                                            for (var i = dropdown.options.length - 1; i >= 0; i--) {
+                                                const value = dropdown.options[i].value;
+                                                if (value === "5" || value === '4' || value === '3' || value === '1') {
+                                                    dropdown.remove(i);
+                                                }
+                                            }
+                                            dropdown.value = "2";
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                @{
+
+                                    if (ViewData.ModelState.IsValid == false)
+                                    {
+                                        <div class="mt-2 mb-2" style="color:red; text-align:center;" role="alert" id="ErrorAlert">
+
+                                            @foreach (var modelState in ViewData.ModelState.Values)
+                                            {
+                                                foreach (var error in modelState.Errors)
+                                                {
+                                                    @error.ErrorMessage  <br />
+                                                }
+                                            }
+
+                                        </div>
+                                    }
+                                }
+                            </div>
+
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12 mt-2 mb-2">
+                                    <button id="create-account-button"
+                                            class="g-recaptcha form-control display-none custom-button"
+                                            data-sitekey="@RecaptchaKey.SiteKey"
+                                            data-callback='onSubmit'
+                                            data-action='submit'
+                                            type="submit"
+                                           >
+                                        Create account
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 mt-2 mb-2 d-flex justify-content-center">
+                                    <p class="text-muted">
+                                        Already have account? <a asp-controller="Account" asp-action="Login" class="text-muted ml-1"><b>Login</b></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col">
+                            <partial name="_FooterPartial" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Script {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="~/assets/js/tranglo1/password-validation.js" asp-append-version="true"></script>
+    <script src="~/assets/js/tranglo1/registration-form-validation.js" asp-append-version="true"></script>
+    <script>
+
+        let selectedAccountType = '';
+        let signupCodeType = '';
+        let isActionButtonEnabled = false;
+
+        function disableCreateAccountButton() {
+            isActionButtonEnabled = false
+            $("#create-account-button").prop('disabled', true)
+            $("#create-account-button").removeClass("enable-create-account-button").addClass("disable-create-account-button").show();
+        }
+
+        function enableCreateAccountButton() {
+            isActionButtonEnabled = true
+            $("#create-account-button").prop('disabled', false)
+            $("#create-account-button").addClass("enable-create-account-button").removeClass("disable-create-account-button").show();
+        }
+
+        grecaptcha.ready(function () {
+            isFormValid();
+        });
+
+        function onSubmit(token) {
+            if (isActionButtonEnabled) {
+                document.getElementById("recaptcha-token").setAttribute("value", token);
+                document.getElementById("registrationForm").submit();
+            }
+        }
+
+        function initMdcDropdown(mdcSelectId, hiddenInputId) {
+            const mdcSelect = new mdc.select.MDCSelect(document.querySelector("#" + mdcSelectId));
+            const hiddenInput = document.getElementById(hiddenInputId);
+
+            if(hiddenInput){
+                mdcSelect.value = hiddenInput.value
+            }
+
+            mdcSelect.listen('MDCSelect:change', () => {
+                hiddenInput.value = mdcSelect.value;
+                $(hiddenInput).trigger('change');
+            });
+        }
+
+        $(document).ready(function () {
+            disableCreateAccountButton();
+            $("#FormType").val(0);
+            SetFormBasedOnFormType();
+                
+            [].forEach.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+                mdc.textField.MDCTextField.attachTo(el);
+            });
+
+            // init dropdown
+            initMdcDropdown('countrySelect', 'CountryISO2');
+            initMdcDropdown('leadsOriginSelect', 'leadsOrigin');
+
+            $('#RegistryCode').blur(function () {
+                const code = $('#RegistryCode').val();
+                checkCodeType(code);
+            });
+                
+            $('#HasSignUpCode').change(function () {
+                // $(".headline").text("Create your Tranglo account");
+                $(".headline").html('@Html.Raw("Create your Tranglo<br>account")');
+                if ($(this).is(':checked')) {
+                    showSignUpWithCodeForm();                                                
+                } else {
+                    if (id && (id === "tbmy" || id === "tbsg")) {
+                        clearTheForm();
+                        landingToggle();
+                    }else
+                    {
+                        hideTheFormFields();                            
+                    }
+                }
+                $("#IsTermsAndConditionReadAgreed").prop("checked", false);
+                resetElement('TOCfeedback');
+                resetElement('ErrorAlert');
+                isFormValid();
+            });
+
+            $('#backButton').click(function () {
+                hideTheFormFields();
+            });
+
+            // Query string check
+            function getQueryParam(name) {
+                let params = new URLSearchParams(window.location.search);
+                return params.get(name);
+            }
+            let id = getQueryParam('landing');
+            if (id && (id === "tbmy" || id === "tbsg")) {
+                clearTheForm();
+                landingToggle();
+            }
+
+            // Toggle button group logic
+            $('.button-group .toggle-button').click(function (event) {
+                var isActive = $(this).hasClass('register-active-toggle');
+
+                $('.button-group .toggle-button').removeClass('register-active-toggle');
+                $('.button-group .tick-mark').hide();
+                $("#businessDropdown").hide();
+
+                if (!isActive) {
+                    $(this).addClass('register-active-toggle');
+                    $(this).find('.tick-mark').show();
+
+                    var buttonId = $(this).attr('id');
+                    switch (buttonId) {
+                        case "business":
+                            businessToggle();
+                            break;
+                        case "connect":
+                            connectToggle();
+                            break;
+                    }
+                }
+                event.stopPropagation();
+            });
+
+
+            $(document).click(function (event) {
+                if (!$(event.target).closest('.toggle-button, #businessDropdown').length) {
+                    $('.button-group .toggle-button').removeClass('register-active-toggle');
+                    $('.button-group .tick-mark').hide();
+                    $("#businessDropdown").hide();
+                }
+            });
+
+            function autoSelectCorporateforTB() {
+            //auto select business type - Corporate 
+            let customerTypeVal = 2;
+            let customerTypeDesc = $('#CustomerTypeCode option:selected').text();
+
+            if (customerTypeVal === "") {                    
+                hideTheFormFields();
+            } else if (customerTypeVal > 1) {
+                $(".headline").html(`
+                        <div style="text-align: center;">
+                        <img src="/assets/images/tranglo-business-logo.svg" alt="Business Image" class="headline-image" style="width: 270px; height: auto; display: block; margin: 0 auto 10px;">
+                        <span class="subtitle-1">${customerTypeDesc}</span>
+                        </div>
+                            `);
+                $('#CompanyNameFloat').text('Company Name');                    
+                showBusinessForm();                    
+                gtag('event', 'view_signup_TB')                    
+            } else {                    
+                $(".headline").html(`
+                        <div style="text-align: center;">
+                        <img src="/assets/images/tranglo-business-logo.svg" alt="Business Image" class="headline-image" style="width: 270px; height: auto; display: block; margin: 0 auto 10px;">
+                        <span style="body-1">${customerTypeDesc}</span>
+                        </div>
+                            `);
+                showIndividualForm();
+            }
+            }
+
+            // The rest of your functions (showBusinessForm, showIndividualForm, etc.) go here...
+            function showBusinessForm() {                    
+                $("#registrationFormFields").addClass("show").removeClass("hide").show();
+
+                $("#registryCodeRow").hide();
+                $("#registryCodeRow").val("");
+
+                $("#create-account-button").addClass("display-block").removeClass("display-none").show();
+                $("#companyNameRow").show();
+                $('#CompanyNameFloat').text('Company Name');
+
+                $("#fullNameRow").show();
+                $("#countryRow").show();
+
+                $("#solutionChooser").hide();
+                $("#businessDropdown").hide();
+
+                $("#backButton").removeClass("hide").addClass("show").show();
+
+                $("#FormType").val(2);
+           
+                selectedAccountType = 'business';
+
+
+                let id = getQueryParam('landing');
+                if (id && id === "tbmy" && $("#CountryISO2 option[value='MY']").length > 0) {
+                    $("#backButton").hide();
+                    $('#CountryISO2').val('MY');
+                    $("#CustomerTypeCode").val(2);
+                } 
+                else if (id && id === "tbsg" && $("#CountryISO2 option[value='SG']").length > 0) {
+                    $("#backButton").hide();
+                    $('#CountryISO2').val('SG');
+                    $("#CustomerTypeCode").val(2);
+                }
+
+                isFormValid();                    
+            }
+
+            function SetFormBasedOnFormType()
+            {
+                /*
+                    0 - RESET FORM
+                    1 - SELF SIGN UP - CONNECT
+                    2 - SELF SIGN UP - BUSINESS
+                    3 - SIGN UP WITH CODE - Connect / Business ( Non Individual )
+                    4 - SIGN UP WIT H CODE - Individual
+                */
+                var formType = @Model.FormType;
+                if (formType == 1 || formType == 2) {
+                    showBusinessForm();
+                }
+                else if (formType == 3) {
+                    showSignUpWithCodeForm();
+                }
+                else if (formType == 4) {
+                    showIndividualForm();
+                }
+            }
+
+            function showIndividualForm() {
+                $("#registrationFormFields").addClass("show").removeClass("hide").show();
+
+                $("#fullNameRow").hide();
+
+                $("#registryCodeRow").hide();
+                $("#registryCodeRow").val("");
+
+                $("#create-account-button").addClass("display-block").removeClass("display-none").show();
+                $("#companyNameRow").show();
+                $('#CompanyNameFloat').text('Preferred Name');
+
+                $("#countryRow").show();
+
+                $("#solutionChooser").hide();
+                $("#businessDropdown").hide();
+
+                $("#backButton").removeClass("hide").addClass("show").show();
+
+                $("#FormType").val(4);
+
+                selectedAccountType = 'individual';
+
+                isFormValid();
+            }
+
+            function showSignUpWithCodeForm() {
+                $("#registrationFormFields").addClass("show").removeClass("hide").show();
+
+                $("#companyNameRow").hide();
+                $("#companyNameRow").val("");
+
+                $("#registryCodeRow").show();
+
+                $("#create-account-button").addClass("display-block").removeClass("display-none").show();
+                $("#fullNameRow").show();
+                $("#countryRow").hide();
+
+                $("#solutionChooser").hide();
+                $("#CustomerTypeCode").val("");
+                $("#CustomerTypeCode").hide();
+
+                $("#solutionChooser").hide();
+                $("#solutionCode").val("");
+                $("#businessDropdown").hide();
+
+                let id = getQueryParam('landing');
+                if (id && (id === "tbmy" || id === "tbsg")) {
+                    $("#backButton").hide();
+                }else{
+                    $("#backButton").show();
+                }
+
+                $("#FormType").val(3);
+
+                selectedAccountType = 'code';
+                signupCodeType = 'nonIndividual'
+
+                isFormValid();
+            }
+
+            function hideTheFormFields() {
+                $("#registrationFormFields").addClass("hide").removeClass("show").hide();
+                $("#create-account-button").addClass("display-none").removeClass("display-block").hide();
+
+                $("#solutionChooser").show();
+                $("#CustomerTypeCode").val("");
+                $("#CustomerTypeCode").show();
+
+                $("#backButton").removeClass("show").addClass("hide").hide();
+                $("#HasSignUpCode").prop("checked", false);
+
+                $("#solutionChooser").show();
+                $("businessDropdown").show();
+
+                $(".headline").html('@Html.Raw("Create your Tranglo<br>account")');
+
+                $("#FormType").val(0);
+
+                selectedAccountType = '';
+
+                clearTheForm();
+            }
+
+            function clearTheForm() {
+                resetMDCtextFields();
+                resetMDCdropdownFields();
+
+                // --- Clear all feedback spans (feedback has been set to have caption class for font style so trace using caption) ---
+                document.querySelectorAll(".caption").forEach(span => {
+                    span.innerHTML = "";
+                    span.classList.remove("text-danger", "text-success");
+                });
+
+                // --- Clear others ---
+                $('#IsTermsAndConditionReadAgreed').prop("checked", false);
+                $('#otherLeadsOriginRow').slideUp();
+                setAllFieldAsInvalid();
+                resetElement('TOCfeedback');
+                resetElement('ErrorAlert');
+            }
+
+            function resetMDCtextFields(){
+                document.querySelectorAll(".mdc-text-field").forEach(tfEl => {
+                    const tfInstance = tfEl.MDCTextField || new mdc.textField.MDCTextField(tfEl);
+                    tfEl.MDCTextField = tfInstance;
+
+                    const input = tfEl.querySelector("input, textarea");
+
+                    if (input) {
+                        input.value = null;
+                        input.setCustomValidity("");
+                    }
+
+                    tfEl.classList.remove("mdc-text-field--invalid");
+
+                    setTimeout(() => {
+                        tfInstance.value = "";
+                        tfInstance.layout();
+                    });
+                });
+            }
+                
+            function resetMDCdropdownFields(){
+                document.querySelectorAll(".mdc-select").forEach(selEl => {
+                    const selInstance = selEl.__mdcSelect || new mdc.select.MDCSelect(selEl);
+                    selEl.__mdcSelect = selInstance;
+
+                    const selectedText = selEl.querySelector(".mdc-select__selected-text");
+                    if (selectedText) selectedText.textContent = "";
+
+                    selEl.querySelectorAll(".mdc-list-item").forEach(li => li.classList.remove("mdc-list-item--selected"));
+
+                    selInstance.selectedIndex = -1;
+                    selInstance.value = null;
+                    selInstance.valid = true;
+
+                    selEl.classList.remove("mdc-select--invalid");
+
+                    if (selInstance.foundation && selInstance.foundation.adapter) {
+                        selInstance.foundation.adapter.floatLabel(false);
+                    }
+                });
+            }
+
+            function resetElement(elementId) {
+                const el = typeof elementId === "string" ? document.getElementById(elementId) : elementId;
+                if (!el) return;
+                el.innerHTML = "";
+            }
+
+            function checkCodeType(code) {
+                const textFields = [...document.querySelectorAll('.mdc-text-field')]
+                    .map(el => mdc.textField.MDCTextField.attachTo(el));
+
+                checkCodeURL = '@Url.Action("GetSignUpCodeData", "Account")';
+
+                $.ajax({
+                    type: "GET",
+                    url: checkCodeURL,
+                    data: {signUpCode: code},
+                            contentType: "application/json; charset=utf-8",
+                            dataType: 'json',
+                            success: function (result) {
+                                const registryCodeElement = document.getElementById("RegistryCode");
+                                const registryCodeFeedbackElement = document.getElementById("RegistryCodeFeedback");
+                                const registryCodeWrapper = registryCodeElement.closest(".mdc-text-field");
+                                const registryCodeTextField = textFields.find(tf => tf.root === registryCodeWrapper);
+
+                                if (result === 2) {
+                                    signupCodeType = 'individual'
+                                    $("#fullNameRow").hide();
+                                } else if (result === 1) {
+                                    signupCodeType = 'nonIndividual'
+                                    $("#fullNameRow").show();
+                                } else {
+                                    displayFieldInvalid(registryCodeFeedbackElement, registryCodeTextField);
+                                    registryCodeFeedbackElement.innerHTML = "Registry Code does not exist";
+                                    updateRegistryCodeValid(false);                                                                             
+                                }
+                            },
+                            error: function (error) {
+                            }
+                        });
+            }
+
+            function landingToggle(){
+                $("#SolutionCode").val("2");
+                hideTheFormFields();
+                $("#businessDropdown").val("0").change();
+                $(".headline").text("Corporate");
+                autoSelectCorporateforTB();
+            }
+
+            function businessToggle(){
+                $("#SolutionCode").val("2");
+                $("#businessDropdown").show();
+                hideTheFormFields();
+                $("#CustomerTypeCode").val("2").change();
+                autoSelectCorporateforTB();
+            }
+
+            function connectToggle(){
+                $("#SolutionCode").val("1");
+                $(".headline").html('<img src="/assets/images/tranglo-connect-logo.svg" alt="Connect Image" class="headline-image" style="width: 270px; height: auto;">');
+                $('#CompanyNameFloat').text('Company Name');
+                $("#businessDropdown").hide();
+                showBusinessForm();
+            }
+
+            //special case : set termsAndConditions to false everytime page refreshes
+            $("#IsTermsAndConditionReadAgreed").prop("checked", false);
+
+            // Check if HasSignUpCode should be initially checked and trigger change event
+            if (@(Model.HasSignUpCode.ToString().ToLower())) {
+                $("#HasSignUpCode").prop("checked", true).trigger("change");
+            }
+
+            const leadsOriginVal = document.getElementById("leadsOrigin").value;
+            if (leadsOriginVal === '10') {
+                $('#otherLeadsOriginRow').slideDown();
+            }
+
+            $('#leadsOrigin').on('change', function () {
+                if($(this).val() === '10') {
+                    $('#otherLeadsOriginRow').slideDown();
+                } else {
+                    $('#otherLeadsOriginRow').slideUp();
+                    $('#OtherLeadsOrigin').val(null).trigger("input");
+                }
+            });
+
+            setupPeekPassword(document.getElementById('Password'), document.getElementById('peekPassword'));
+            setupPeekPassword(document.getElementById('ConfirmPassword'), document.getElementById('peekConfirmPassword'));
+        });
+
+    </script>
+
+    <style>
+
+        #i-have-a-code {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background: rgba(22,140,239, 0.05);
+        }
+
+        .tranglo-button {
+            background-color: #FFFFFF;
+            border: 2px solid #eaeaea;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: #000000;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+            .tranglo-button:hover {
+                border: 2px solid #16bcef;
+            }
+
+
+        .tick-mark {
+            display: none;
+            font-size: 15px;
+            font-weight: bold;
+            color: #00d0fD;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            transform: translateY(-50%);
+        }
+
+        .register-active-toggle .tick-mark {
+            display: block;
+        }
+
+
+        .enable-create-account-button {
+            background-color: #16bcef;
+            border-radius: 25px;
+            color: #FFFFFF;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .disable-create-account-button {
+            background-color: #a2e4f9;
+            border-radius: 25px;
+            color: #FFFFFF;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .form-control:disabled {
+            background-color: #a2e4f9;
+        }
+
+        .flex-direction-row {
+            flex-direction: row;
+        }
+
+        .tranglo-body {
+            min-height: calc(100vh - 100px);
+        }
+
+        .tranglo-footer {
+            height: 100px;
+        }
+
+        select.decorated option:hover {
+            box-shadow: 0 0 10px 100px #16bcef inset;
+        }
+
+        .back-button {
+            display: flex !important;
+            align-items: center;
+        }
+
+        .floating-label-wrapper {
+            position: relative;
+            margin-top: 1.5rem;
+        }
+
+            .floating-label-wrapper select {
+                border-radius: 4px;
+            }
+
+            .floating-label-wrapper label {
+                position: absolute;
+                top: 0;
+                left: 0.75rem;
+                transform: translateY(-50%);
+                background: #fff;
+                font: normal normal normal 12px/16px Montserrat;
+                letter-spacing: 0.4px;
+            }
+    </style>
+
+}

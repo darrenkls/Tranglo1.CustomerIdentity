@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tranglo1.CustomerIdentity.IdentityServer</name>
+    </assembly>
+    <members>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.Command.BaseCommand`1">
+            <summary>
+            A marker class to represent a command.
+            </summary>
+            <typeparam name="TResponse"></typeparam>
+        </member>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.Config">
+            <summary>
+            Refer to this :
+            https://leastprivilege.com/2016/12/01/new-in-identityserver4-resource-based-configuration/
+            
+            In latest IdentityServer4, ApiScope is no longer applicable. We will only deal with
+            <seealso cref="T:IdentityServer4.Models.IdentityResource"/> and <seealso cref="T:IdentityServer4.Models.ApiResource"/>
+            </summary>
+        </member>
+        <member name="P:Tranglo1.CustomerIdentity.IdentityServer.Config.ApiScopes">
+            <summary>
+            No applicable in IdentityServer4 anymore. Please use "resouces"
+            </summary>
+            TODELETE
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.AccountController.Login(System.String)">
+            <summary>
+            Entry point into the login workflow
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.AccountController.Login(Tranglo1.CustomerIdentity.IdentityServer.Models.LoginInputModel)">
+            <summary>
+            Handle postback from username/password login
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.AccountController.Logout(System.String)">
+            <summary>
+            Show logout page
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.AccountController.Logout(Tranglo1.CustomerIdentity.IdentityServer.Controllers.LogoutInputModel)">
+            <summary>
+            Handle logout page postback
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.AccountController.Register(System.Threading.CancellationToken)">
+            <summary>
+            Register user.
+            </summary>
+            <param name="command">The object used to register user.</param>
+            <returns>IdentityResult</returns>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.AccountController.ConfirmEmail(Tranglo1.CustomerIdentity.IdentityServer.Models.VerifyCustomerUserEmailModel)">
+            <summary>
+            Verify user email.
+            </summary>
+            <param name="command">The object used to verify user email.</param>
+            <returns>RedirectResult</returns>
+        </member>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.Controllers.ConsentController">
+            <summary>
+            This controller processes the consent UI
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.ConsentController.Index(System.String)">
+            <summary>
+            Shows the consent screen
+            </summary>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.ConsentController.Index(Tranglo1.CustomerIdentity.IdentityServer.Controllers.ConsentInputModel)">
+            <summary>
+            Handles the consent screen postback
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.Extensions.IsNativeClient(IdentityServer4.Models.AuthorizationRequest)">
+            <summary>
+            Checks if the redirect URI is for a native client.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.Controllers.GrantsController">
+            <summary>
+            This sample controller allows a user to revoke grants given to clients
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.GrantsController.Index">
+            <summary>
+            Show list of grants
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.GrantsController.Revoke(System.String)">
+            <summary>
+            Handle postback to revoke a client
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.HomeController.Error(System.String)">
+            <summary>
+            Shows the error page
+            </summary>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.KYC.KYCController.SubmitForVerification(System.Int32)">
+            <summary>
+            Submit the business profile and let Tranglo Compliance to do verification
+            </summary>
+            <param name="businessProfileCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.Controllers.KYC.KYCController.AddSignature(System.Int32,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload signature image file
+            </summary>
+            <param name="businessProfileCode"></param>
+            <param name="uploadedFile"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Swagger.SwaggerDefaultValues">
+            <summary>
+            Source: 
+            https://github.com/Microsoft/aspnet-api-versioning/wiki/Swashbuckle-Integration
+            https://github.com/microsoft/aspnet-api-versioning/blob/master/samples/aspnetcore/SwaggerODataSample/SwaggerDefaultValues.cs
+            </summary>
+        </member>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.MediatR.BaseQuery`1">
+            <summary>
+            A marker class to represent a query.
+            </summary>
+            <typeparam name="TResponse"></typeparam>
+        </member>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.MediatR.BaseRequest`1">
+            <summary>
+            A base class representing a command or a query. Do not direct inherit from this 
+            class. To create a command or query, please use <seealso cref="!:BaseCommand&lt;TResponse&gt;"/> or
+            <seealso cref="T:Tranglo1.CustomerIdentity.IdentityServer.MediatR.BaseQuery`1"/>
+            </summary>
+            <typeparam name="TResponse"></typeparam>
+        </member>
+        <member name="M:Tranglo1.CustomerIdentity.IdentityServer.MediatR.BaseRequest`1.GetAuditLogAsync(`0)">
+            <summary>
+            Override this function to provide a meaningful audit log message. This
+            function will be called after execution of the command.
+            </summary>
+            <param name="result">The returned result after this command is executed.</param>
+            <returns>Return an audit log message that describing current 
+            <seealso cref="T:Tranglo1.CustomerIdentity.IdentityServer.MediatR.BaseRequest`1"/>. Note that the returned message 
+            does not need to mention current user's name/email...etc </returns>
+        </member>
+        <member name="T:Tranglo1.CustomerIdentity.IdentityServer.Services.Identity.HttpIdentityContext">
+            <summary>
+            The lifetime of this implementation is expected to same as <seealso cref="T:Microsoft.AspNetCore.Http.IHttpContextAccessor"/>, which is 
+            Scoped
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.BusinessProfileContextExtensions.AddBusinessProfileContext(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register implementation of <seealso cref="T:Tranglo1.CustomerIdentity.IdentityServer.Services.Identity.IBusinessProfileContext"/> to retrieve
+            current business profile Id submitted from API call.
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.HttpIdentityContextExtension.AddHttpIdentityContext(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register instance of <seealso cref="T:Tranglo1.CustomerIdentity.Infrastructure.Services.IIdentityContext"/>. 
+            Use this extension when application type is ASP.NET Core
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,48 @@
+﻿@model RegisterViewModel
+
+<div class="row mt-3 justify-content-center" id="registrationFormFields" style="display: none;">
+    <div class="col-8">
+        <div id="registryCodeRow" class="row mb-2">
+            <input asp-for="RegistryCode" placeholder="Signup Code" />
+        </div>
+
+        <div id="companyNameRow" class="row mb-2">
+            <input asp-for="CompanyName" placeholder="Company Name" />
+        </div>
+
+        <div id="fullNameRow" class="row mb-2">
+            <input asp-for="FullName" placeholder="Full name" />
+        </div>
+
+        <div id="countryRow" class="row mb-2">
+            <select asp-for="CountryISO2">
+                <option value="empty">Choose a Country</option>
+                @foreach (var type in Model.Countries)
+                {
+                    <option value="@type.CountryISO2">@type.Description</option>
+                }
+            </select>
+        </div>
+
+        <div class="row mb-2">
+            <input asp-for="Email" placeholder="Email" />
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input asp-for="Password" placeholder="Password" type="password" />
+            </div>
+            <div class="col">
+                <input asp-for="ConfirmPassword" placeholder="Confirm Password" type="password" />
+            </div>
+        </div>
+
+        <div class="row mb-2 mt-5 mb-3">
+            <div class="d-flex">
+                <input type="checkbox" asp-for="IsTermsAndConditionReadAgreed" class="me-2" />
+                <div>By creating an account, you agree to our </div>
+                <a class="ms-1">Privacy &amp; Terms.</a>
+            </div>
+        </div>
+    </div>
+</div>

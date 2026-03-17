@@ -1,0 +1,43 @@
+﻿@model RegisterViewModel
+
+<div class="row mt-3 justify-content-center" id="registerAsIndividual" style="display: none;">
+    <div class="col-8">
+
+        <div class="row">
+            Individual Form
+        </div>
+
+        <div class="row mb-2">
+            <input id="fullName" asp-for="FullName" placeholder="Full Name" />
+        </div>
+
+        <select name="country" id="country">
+            <option value="empty">Choose a Country</option>
+            @foreach (var type in Model.Countries)
+            {
+                <option value="@type.CountryISO2">@type.Description</option>
+            }
+        </select>
+
+        <div class="row mb-2">
+            <input id="email" asp-for="Email" placeholder="Email" />
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <input id="password" asp-for="Password" placeholder="Password" type="password" />
+            </div>
+            <div class="col">
+                <input id="confirmPassword" asp-for="ConfirmPassword" placeholder="Confirm Password" type="password" />
+            </div>
+        </div>
+
+        <div class="row mb-2 mt-5 mb-3">
+            <div class="d-flex">
+                <input type="checkbox" asp-for="IsTermsAndConditionReadAgreed" class="me-2" id="signUpCodeCheckBox" />
+                <div>By creating an account, you agree to our </div>
+                <a class="ms-1">Privacy &amp; Terms.</a>
+            </div>
+        </div>
+    </div>
+</div>

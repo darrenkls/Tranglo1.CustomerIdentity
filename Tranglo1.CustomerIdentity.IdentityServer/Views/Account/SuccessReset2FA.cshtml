@@ -1,0 +1,56 @@
+﻿<div class="row vh-100 me-0">
+    <div class="col-md-6 d-sm-none d-xs-none d-lg-block ms-0">
+        <div class="background-image-tranglo">
+            <img src="/assets/images/tranglo-logo-2.svg" class="tranglo-logo" />
+            <img src="/assets/images/extra-logo-tranglo-front-screen.svg" class="tranglo-extra-logo" />
+        </div>
+    </div>
+
+    <div class="col d-flex flex-column justify-content-center align-items-center" style="max-height: 100vh; overflow: auto;">
+        <div class="d-flex flex-column">
+            <img src="~/assets/images/phase3/password-success.svg" height="64" width="64" class="margin-b-2 mx-auto" draggable="false" />
+
+            <h4 class="color-black text-center headline-5 margin-b-2">
+                2FA reset successful
+            </h4>
+            
+            <p class="color-grey-1 text-center body-2 margin-b-3">
+                Your Two-factor authentication (2FA) has been reset successfully.
+                <br />
+                Log in with your updated settings.
+            </p>
+            
+            <div class="text-center">
+                <a class="text-decoration-none" asp-controller="Account" asp-action="Login">
+                    <button class="mdc-button button-text w-100 primary-color custom-button" id="reset-password-button" type="submit">
+                        <span class="mdc-button__ripple"></span> Continue to login
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        @* Footer *@
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <partial name="_FooterPartial" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Script {
+    <style>
+        button {
+            height: 50px !important;
+        }
+
+        /* Class name following based on https://twdofmixms01.tranglo.net:1234/?path=/story/theme-spacing--spacing */
+        .margin-b-2 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .margin-b-3 {
+            margin-bottom: 2rem !important;
+        }
+    </style>
+}

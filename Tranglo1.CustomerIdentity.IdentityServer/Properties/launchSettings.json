@@ -1,0 +1,86 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:63850/",
+      "sslPort": 44309
+    }
+  },
+  "profiles": {
+    "IdentityServer-Dev": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "localDevelopment"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "IdentityServer-Local": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Local"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "IdentityServer-LocalQA": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "localQA"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "IdentityServer-LocalQAP2": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "localQAP2"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "IdentityServer-LocalUATP2": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "localUATP2"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "IdentityServer-LocalQAP3": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "localQAP3"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "Phase2-IdentityServer-Dev": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "localDevelopmentP2"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "Phase3-IdentityServer-Dev": {
+      "commandName": "Project",
+      //"launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "localDevelopmentP3"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    },
+    "Phase2-IdentityServer-uatP2": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "uatP2"
+      },
+      "ancmHostingModel": "OutOfProcess",
+      "applicationUrl": "https://localhost:5001"
+    }
+  }
+}

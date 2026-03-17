@@ -1,0 +1,275 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Tranglo1.CustomerIdentity.IdentityServer</RootNamespace>
+    <UserSecretsId>1e1c82c5-282b-459f-824d-3f9009671c36</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>1701;1702;1591;</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Command\UpdateAdminUserDetailsCommand.cs" />
+    <Compile Remove="DTO\TrangloRole\ScreenAccessMainMenuOutputDTO.cs" />
+    <Compile Remove="DTO\TrangloRole\ScreenAccessSubMenuOutputDTO.cs" />
+    <Compile Remove="Services\Identity\ITrangloStaffContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Common\Resources\PermissionAssignments.csv" />
+    <None Remove="Common\Resources\PermissionInfos.csv" />
+    <None Remove="Common\Resources\Portals.csv" />
+    <None Remove="templates\emailtemplate\ActivePartnerAccountStatusTemplate.xslt" />
+    <None Remove="templates\emailtemplate\AddSubscriptionTemplate.xslt" />
+    <None Remove="templates\emailtemplate\AdminAppovePartnerGoLiveTemplate.xslt" />
+    <None Remove="templates\emailtemplate\AdminEKYCVerificationStatusTemplate.xslt" />
+    <None Remove="templates\emailtemplate\ApproveReviewResultTemplate.xslt" />
+    <None Remove="templates\emailtemplate\CallbackURLSubmittedTemplate.xslt" />
+    <None Remove="templates\emailtemplate\CallbackURLTemplate.xslt" />
+	<None Remove="templates\emailtemplate\CustomerEKYCVerificationStatusTemplate.xslt" />
+    <None Remove="templates\emailtemplate\DocumentReleasedTemplate.xslt" />
+    <None Remove="templates\emailtemplate\InactivePartnerAccountStatusTemplate.xslt" />
+    <None Remove="templates\emailtemplate\IncompleteReviewResultTemplate.xslt" />
+    <None Remove="templates\emailtemplate\InviteUserExistingUserTemplate.html" />
+    <None Remove="templates\emailtemplate\InviteUserExistingUserTemplate.xslt" />
+    <None Remove="templates\emailtemplate\InviteUserNewUserTemplate.html" />
+    <None Remove="templates\emailtemplate\InviteUserNewUserTemplate.xslt" />
+    <None Remove="templates\emailtemplate\IPAddressSubmittedTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PartnerAllowRequestGoLiveTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PartnerConfirmationTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PartnerKYCRequisitionTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PartnerNameChangeNotificationTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PartnerOnboardingTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PartnerRegistrationTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PartnerRequestedGoLiveTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PasswordResetTemplate.html" />
+    <None Remove="templates\emailtemplate\PasswordResetTemplate.xslt" />
+    <None Remove="templates\emailtemplate\PendingReviewResultTemplate.xslt" />
+    <None Remove="templates\emailtemplate\ProfileScreeningDailyScreening.xslt" />
+    <None Remove="templates\emailtemplate\ProfileScreeningSingleProfile.xslt" />
+    <None Remove="templates\emailtemplate\RejectReviewResultTemplate.xslt" />
+    <None Remove="templates\emailtemplate\ResubmissionforReview.xslt" />
+    <None Remove="templates\emailtemplate\SignUpCodeTemplate.xslt" />
+    <None Remove="templates\emailtemplate\SubmissionforReviewTemplate.xslt" />
+    <None Remove="templates\emailtemplate\VerifyEmailTemplate.xslt" />
+    <None Remove="templates\emailtemplate\WhitelistIPTemplate.xslt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="templates\emailtemplate\AddSubscriptionTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\ActivePartnerAccountStatusTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\AdminEKYCVerificationStatusTemplate.xslt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\BusinessApproveReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\BusinessIncompleteReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PartnerKYCRequisitionTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PartnerNameChangeNotificationTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\ProfileScreeningDailyScreening.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\ProfileScreeningSingleProfile.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Common\Resources\PermissionAssignments.csv" />
+    <EmbeddedResource Include="Common\Resources\Portals.csv" />
+    <EmbeddedResource Include="Common\Resources\PermissionInfos.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="CorrelationId" Version="3.0.1" />
+    <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="EntityFrameworkCore.SqlServer.TemporalTable" Version="1.2.4" />
+    <PackageReference Include="FluentValidation" Version="9.5.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.5.1" />
+    <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.1.0" />
+    <PackageReference Include="IdentityServer4" Version="4.1.2" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" /> 
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.1.1" />
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="4.1.1" />
+    <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="4.1.1" />
+    <PackageReference Include="Masking.Serilog" Version="1.0.13" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
+      <!--<PrivateAssets>all</PrivateAssets>-->
+      <!--<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Mime-Detective" Version="25.8.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+    <PackageReference Include="TimeZoneNames" Version="4.2.0" />
+    <PackageReference Include="Tranglo.DocumentStorage" Version="1.0.0" />
+    <PackageReference Include="Tranglo.UserAccessControl" Version="2.0.0" />
+    <PackageReference Include="Tranglo1.ApprovalWorkflowEngine" Version="1.3.4" />
+    <PackageReference Include="Tranglo1.ApprovalWorkflowEngine.EntityFramework" Version="1.1.1" />
+    <PackageReference Include="Tranglo1.Common" Version="1.0.0" />
+    <PackageReference Include="Tranglo1.ReportExport" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tranglo1.CustomerIdentity.Domain\Tranglo1.CustomerIdentity.Domain.csproj" />
+    <ProjectReference Include="..\Tranglo1.CustomerIdentity.Infrastructure\Tranglo1.CustomerIdentity.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="templates\emailtemplate\AdminAppovePartnerGoLiveTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\ApproveReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\CallbackURLSubmittedTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\CallbackURLTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\DocumentReleasedTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\InactivePartnerAccountStatusTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\IncompleteReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\InviteUserExistingUserTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\InviteUserExistingUserTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\InviteUserNewUserTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\InviteUserNewUserTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\IPAddressSubmittedTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PartnerAllowRequestGoLiveTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PartnerConfirmationTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PartnerOnboardingTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PartnerRegistrationTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PartnerRequestedGoLiveTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PasswordResetTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PasswordResetTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\PendingReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\RejectReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\ResubmissionforReview.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\SignUpCodeTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\SubmissionforReviewTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\VerifyEmailTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\emailtemplate\WhitelistIPTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+	<Content Include="templates\emailtemplate\CustomerEKYCVerificationStatusTemplate.xslt">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
+  <Content Include="templates\emailtemplate\AdminKYCVerifiedStatusTemplate.xslt">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
+	  <Content Include="templates\emailtemplate\MFARequestEmailOTPTemplate.xslt">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+   <Content Include="templates\emailtemplate\PartnerSubmissionEmailTemplate.xslt">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="certs\tranglo.net.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Identity.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\emailtemplate\BusinessPartnerGoLiveTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\emailtemplate\BusinessPartnerKYCRequisitionTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\emailtemplate\BusinessPendingReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\emailtemplate\BusinessRejectReviewResultTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\emailtemplate\SupplyPartnerDocumentReleaseTemplate.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

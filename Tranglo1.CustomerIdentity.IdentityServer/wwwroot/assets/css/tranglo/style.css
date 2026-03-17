@@ -1,0 +1,360 @@
+﻿.background-image-tranglo {
+    position: relative;
+    height: 100vh;
+    background-color: #16BCEF;
+    overflow: hidden;
+}
+
+.tranglo-extra-logo {
+    position: absolute;
+    bottom: -7.625rem;
+    left: -15.0625rem;
+    width: 40rem;
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+    transform: rotate(-1deg);
+    pointer-events: none;
+}
+
+.tranglo-logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13.75rem;
+    height: auto;
+    max-width: 90%;
+}
+
+
+.headline {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 24px !important;
+}
+
+.headline-5 {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.18px;
+    line-height: 32px
+}
+
+.body-1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.body-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.subtitle-1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.button-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    text-transform: initial !important;
+}
+
+.subtitle-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.caption {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.overline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.link-text {
+    color: #16BCEF;
+    text-decoration: none;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.primary-color {
+    background-color: #16BCEF !important;
+}
+
+.secondary-color-cyan {
+    background-color: #00D1CB !important;
+}
+
+.secondary-color-yellow {
+    background-color: #FDC400 !important;
+}
+
+.secondary-color-pink {
+    background-color: #FF0459 !important;
+}
+
+.secondary-color-purple {
+    background-color: #8E48D5 !important;
+}
+
+.secondary-color-dark-blue-gray {
+    background-color: #454F63 !important;
+}
+
+.secondary-color-dark-blue {
+    background-color: #1D285A !important;
+}
+
+.secondary-color-black {
+    background-color: #000000 !important;
+}
+
+.secondary-color-white {
+    background-color: #FFFFFF !important;
+}
+
+.positive-color {
+    background-color: #00B70E !important;
+}
+
+.negative-color {
+    background-color: #E30000 !important;
+}
+
+.color-black {
+    color: #000000;
+}
+
+.color-grey-1 {
+    color: #3e3e3e
+}
+
+.color-dim-grey {
+    color: #6C6C6C;
+}
+
+.custom-button {
+    color: #ffffff !important;
+    border-radius: 24px !important;
+    opacity: 1 !important;
+    height: 48px !important;
+}
+
+#myDiv {
+    transition: transform 0.3s ease-in-out;
+}
+
+.show {
+    transform: translateY(0%);
+}
+
+.hide {
+    transform: translateY(-100%);
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.button-group {
+    display: inline-block;
+}
+
+.active-toggle {
+    background-color: #16bcef !important;
+    color: #ffffff !important;
+}
+
+.margin-t-5 {
+    margin-top: 1.5rem !important;
+}
+
+.margin-b-5 {
+    margin-bottom: 1.5rem !important;
+}
+
+/*MDC INPUT FIELD*/
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+    border-color: #16bcef !important;
+}
+
+.mdc-text-field--focused .mdc-floating-label--float-above {
+    color: #16bcef !important;
+}
+
+.mdc-text-field .mdc-text-field__input {
+    caret-color: #888888 !important;
+    font-family: 'Montserrat' !important;
+}
+
+.mdc-text-field .mdc-floating-label {
+    font-family: 'Montserrat' !important;
+}
+
+.mdc-text-field.mdc-text-field--outlined.mdc-text-field--invalid .mdc-floating-label {
+    color: #E30000 !important; /* invalid label color */
+}
+
+
+/*MDC SELECT FIELD*/
+.mdc-select--outlined.mdc-select--focused .mdc-notched-outline__leading,
+.mdc-select--outlined.mdc-select--focused .mdc-notched-outline__notch,
+.mdc-select--outlined.mdc-select--focused .mdc-notched-outline__trailing {
+    border-color: #16bcef !important;
+}
+
+.mdc-select--outlined.mdc-select--focused .mdc-floating-label--float-above {
+    color: #16bcef !important; 
+}
+
+.mdc-select .mdc-floating-label {
+    font-family: 'Montserrat' !important;
+}
+
+.mdc-list-item:hover,
+.mdc-list-item--selected,
+.mdc-list-item--activated {
+    background-color: #e1e1e1 !important;
+}
+
+.mdc-select__selected-text {
+    line-height: 56px; /* match outlined height */
+}
+
+/* MDC SELECT Toggle */
+.mdc-select__dropdown-icon .mdc-select__dropdown-icon-inactive {
+    fill: #888888;
+}
+
+.mdc-button:disabled {
+    opacity: .5 !important;
+}
+
+/*HTML CHECKBOX OVERRIDE*/
+input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+    box-sizing: content-box;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #b7b7b7;
+}
+
+input[type="checkbox"]:before {
+    content: '';
+    display: block;
+    transition: transform 200ms;
+}
+
+input[type="checkbox"]:checked:before {
+    width: 4px;
+    height: 9px;
+    margin-left: 5px;
+    margin-top: 2px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+}
+
+input[type='checkbox']:checked {
+    background-color: #16bcef !important;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.totp-container {
+    display: flex;
+    gap: 10px;
+}
+
+.totp-input {
+    width: 50px;
+    height: 57px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.error-container {
+    background: #E3000014;
+    color: #B70509;
+    border-left: 4px solid #E30000;
+    border-radius: 4px;
+    padding: 16px 24px;
+}
+
+.totp-input:focus {
+    border-color: #16BCEF;
+    box-shadow: 0 0 5px rgba(22, 188, 239, 0.5);
+}
+
+/* Adjust to four inputs per row for smaller screens */
+@media (max-width: 768px) {
+    .totp-input.recoveryCode {
+        width: calc(25% - 10px); /* Four inputs per row */
+    }
+}
+
+/* Adjust to two inputs per row for very small screens */
+@media (max-width: 480px) {
+    .totp-input.recoveryCode {
+        width: calc(50% - 10px); /* Two inputs per row */
+    }
+}
+
+/* Eye icon style for peek password at login, sign up and reset password form */
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #666;
+}
+
+.eye-icon:active {
+    color: #000;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none !important;
+}

@@ -1,0 +1,292 @@
+@model LoginViewModel
+@inject Tranglo1.CustomerIdentity.IdentityServer.Services.Recaptcha.RecaptchaKey RecaptchaKey
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment Env
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+<link rel="stylesheet" href="~/assets/css/tranglo/style.css" asp-append-version="true" />
+
+<style>
+    @@keyframes onAutoFillStart {
+        from {
+        }
+
+        to {
+        }
+    }
+
+    /* autofill hook */
+    input:-webkit-autofill {
+        animation-name: onAutoFillStart;
+        animation-duration: 0.01s;
+    }
+</style>
+
+@await Html.PartialAsync("_SafetyAlertReminderModal")
+
+@{
+    var isUATOrProductionEnv = Env.EnvironmentName == "uatP2" || Env.EnvironmentName == "Production";
+}
+
+<script>
+    gtag('event','view_Login')
+</script>
+
+
+<div class="row vh-100 me-0">
+    <div class="col-md-6 d-sm-none d-lg-block ms-0">
+        <div class="background-image-tranglo">
+            <img src="/assets/images/tranglo-logo-2.svg" class="tranglo-logo" />
+            <img src="/assets/images/extra-logo-tranglo-front-screen.svg" class="tranglo-extra-logo" />
+        </div>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <div class="d-flex align-items-center row w-100">
+            <div class="col">
+                <form asp-action="Login"
+                      asp-controller="Account"
+                      method="post"
+                      asp-antiforgery="true"
+                      id="login-form"
+                      autocomplete="off"
+                      novalidate>
+
+                    <!-- Decoy fields before real fields -->
+                    <input type="text"
+                           name="username"
+                           autocomplete="username"
+                           tabindex="-1"
+                           aria-hidden="true"
+                           style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;opacity:0;" />
+
+                    <input type="password"
+                           name="password"
+                           autocomplete="current-password"
+                           tabindex="-1"
+                           aria-hidden="true"
+                           style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;opacity:0;" />
+
+                    <input type="hidden" asp-for="ReturnUrl" />
+                    <input type="hidden" asp-for="RecaptchaToken" id="recaptcha-token" />
+                    <div class="headline d-flex justify-content-center" style="margin-bottom: 24px;">Welcome To Tranglo</div>
+
+                    <div class="d-flex justify-content-center" style="margin-bottom: 16px;">
+                        <div class="mdc-text-field mdc-text-field--outlined w-75">
+                            <input class="mdc-text-field__input"
+                                   id="ux_user"
+                                   type="text"
+                                   name="ux_user"
+                                   autocorrect="off"
+                                   spellcheck="false"
+                                   autocomplete="@(isUATOrProductionEnv ? "off" : "username")"
+                                   @(isUATOrProductionEnv ? "readonly" : "") />
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label for="ux_user" class="mdc-floating-label">Email Address</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <div class="mdc-text-field mdc-text-field--outlined w-75">
+                            <input class="mdc-text-field__input"
+                                   id="ux_pass"
+                                   type="password"
+                                   name="ux_pass"
+                                   autocomplete="@(isUATOrProductionEnv ? "off" : "current-password")"
+                                   @(isUATOrProductionEnv ? "readonly" : "") />
+                            <i id="peekPassword" class="material-symbols-outlined eye-icon">visibility</i>
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label for="ux_pass" class="mdc-floating-label" style="">Password</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center margin-t-5">
+                        <div style="color:red" role="alert" id="ErrorAlert" class="w-75 text-center">
+                            @if (!ViewData.ModelState.IsValid)
+                            {
+                                foreach (var modelState in ViewData.ModelState.Values)
+                                {
+                                    foreach (var error in modelState.Errors)
+                                    {
+                                        @error.ErrorMessage
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center margin-t-5">
+                        <button class="mdc-button button-text w-75 primary-color custom-button"
+                                id="login-button"
+                                data-sitekey="@RecaptchaKey.SiteKey"
+                                data-callback='onSubmit'
+                                data-action='submit'>
+                            <span class="mdc-button__ripple"></span> Login
+                        </button>
+                    </div>
+
+                </form>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-9 w-75 d-flex align-items-center justify-content-between p-3">
+                        <div class="body-2">
+                            Don't have an account?
+                            <a asp-controller="Account" asp-action="Register" class="subtitle-2 link-text">
+                                Sign Up
+                            </a>
+                        </div>
+                        <div>
+                            <a asp-controller="Account" asp-action="ForgotPassword" class="subtitle-2 link-text">
+                                Forgot password?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col">
+                        <partial name="_FooterPartial" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="~/assets/js/tranglo1/password-validation.js" asp-append-version="true"></script>
+    <script>
+        let userTypedUsername = false;
+        let userTypedPassword = false;
+
+        function showError(message) {
+            $('#ErrorAlert').text(message || '');
+        }
+
+        function attachInputGuards(input, fieldName) {
+            //Detect typing (real key presses)
+            input.addEventListener('keydown', function (e) {
+                if (e.ctrlKey || e.metaKey || e.altKey) return;   // ignore Ctrl+V etc.
+                if (e.key.length === 1) {                         // only character keys
+                    if (fieldName === 'username') {
+                        userTypedUsername = true;
+                    } else {
+                        userTypedPassword = true;
+                    }
+                }
+            });
+
+            //Block paste immediately
+            input.addEventListener('paste', function (e) {
+                e.preventDefault();
+                input.value = '';
+                showError('For security purposes, please enter your ' + fieldName + ' manually.');
+                loginButtonDisabled(true);
+            });
+
+            //Catch non-typed inserts (e.g. drag/drop, autofills)
+            input.addEventListener('input', function (e) {
+                const val = input.value || '';
+
+                // inputType can be e.g. "insertFromPaste", "insertFromDrop", etc.
+                if (e.inputType && e.inputType.startsWith('insertFrom')) {
+                    if ((fieldName === 'username' && !userTypedUsername) ||
+                        (fieldName === 'password' && !userTypedPassword)) {
+                        input.value = '';
+                        showError('For security purposes, please enter your ' + fieldName + ' manually.');
+                        loginButtonDisabled(true);
+                        return;
+                    }
+                }
+
+                // Enable/disable button based on both fields
+                if (validateUsernameAndPassword()) {
+                    loginButtonDisabled(false);
+                } else {
+                    loginButtonDisabled(true);
+                }
+            });
+        } // end of function attachInputGuards
+
+        //Detect autofill via CSS animation hook
+        document.addEventListener('animationstart', function (e) {
+            const currentEnv = "@Env.EnvironmentName";
+            if (currentEnv === "uatP2" || currentEnv === "Production") {
+                if (e.animationName === 'onAutoFillStart') {
+                    if (e.target.id === 'ux_user' || e.target.id === 'ux_pass') {
+                        e.target.value = '';
+                        // showError('Browser autofill is disabled for security reasons. Please type your credentials manually.');
+                        showError('For security purposes, please enter your credentials manually.');
+                        loginButtonDisabled(true);
+                    }
+                }
+            }
+        }, true);
+
+        $(document).ready(function () {
+            const currentEnv = "@Env.EnvironmentName";
+            const userInput = document.getElementById('ux_user');
+            const passInput = document.getElementById('ux_pass');
+
+            //disable from autofill/paste if env = uat or prod
+            if (currentEnv === "uatP2" || currentEnv === "Production") {
+                attachInputGuards(userInput, 'username');
+                attachInputGuards(passInput, 'password');
+
+                $('#ux_user, #ux_pass').on('focus', function() {
+                    $(this).removeAttr('readonly');
+                });
+
+                $('#ux_user, #ux_pass').on('blur', function() {
+                    $(this).attr('readonly', 'readonly');
+                });
+            }
+
+            $('#ux_user, #ux_pass').on('input', function () {
+                if (validateUsernameAndPassword()) {
+                    loginButtonDisabled(false)
+                } else {
+                    loginButtonDisabled(true)
+                }
+            });            
+
+            [].forEach.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+                mdc.textField.MDCTextField.attachTo(el);
+            });
+
+            grecaptcha.ready(function () {
+                loginButtonDisabled(true);
+            });
+
+            setupPeekPassword(document.getElementById("ux_pass"), document.getElementById('peekPassword'));
+        });
+
+
+        function loginButtonDisabled(disabled) {
+            $('#login-button').prop('disabled', disabled);
+        }
+
+        function validateUsernameAndPassword() {
+            const username = $('#ux_user').val();
+            const password = $('#ux_pass').val();
+
+            if (username.length > 0 && password.length > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function onSubmit(token) {
+            document.getElementById("recaptcha-token").setAttribute("value", token);
+            document.getElementById("login-form").submit();
+        }
+    </script>
+}

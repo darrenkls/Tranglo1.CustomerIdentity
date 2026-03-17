@@ -1,0 +1,57 @@
+﻿<div class="modal fade" id="safetyAlertReminderModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:648px">
+        <div class="modal-content border-0 shadow-lg pt-5 pb-4">
+            <!-- Modal Header with Bell Icon -->
+            <div class="modal-header border-0 text-center p-0 mb-4">
+                <div class="w-100">
+                    <div class="d-flex justify-content-center mb-3">
+                        <img src="/assets/images/bell_icon.svg" alt="bell_icon" />
+                    </div>
+                    <div class="modal-title headline-5">Reminder</div>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body px-4 py-0">
+                <div class="rounded p-4 mb-3" style="background:#E3000014">
+
+                    <ol class="mb-0 body-2 color-grey-1">
+                        <li>Clear your browser cache after exiting our webpage.</li>
+                        <li>Avoid clicking suspicious SMS or email links.</li>
+                        <li>Never share your login details, passwords, or OTP with anyone.</li>
+                        <li>Block unknown numbers requesting personal details.</li>
+                    </ol>
+
+                </div>
+
+                <!-- Footer Text -->
+                <div class="body-2 text-center mb-4 color-grey-1">
+                    These simple steps help protect your personal information<br>
+                    and prevent unauthorised access.
+                </div>
+
+                <div class="body-2 text-center mb-4 color-grey-1">
+                    Stay alert and stay safe!
+                </div>
+
+                <!-- Close Button -->
+                <div class="text-center">
+                    <button type="button" style="background:#16bcef; border:white" class="btn btn-primary px-5 py-2 rounded-pill button-text" data-bs-dismiss="modal" style="min-width: 120px;">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var modal = new bootstrap.Modal(document.getElementById('safetyAlertReminderModal'), {
+            backdrop: 'static',
+            keyboard: false
+        });
+        modal.show();
+    })
+</script>
+

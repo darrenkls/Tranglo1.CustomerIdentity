@@ -1,0 +1,13 @@
+﻿@model string
+<div class="totp-container">
+    @for (int i = 1; i <= 6; i++)
+    {
+        <input autocomplete="off"
+               type="text"
+               maxlength="1"
+               class="totp-input"
+               id="@Model-totp-@i"
+               data-next="@Model-totp-@(i + 1)"
+               data-prev="@Model-totp-@(i - 1)" />
+    }
+</div>
