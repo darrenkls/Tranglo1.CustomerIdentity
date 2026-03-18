@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Watchlist
+﻿namespace Tranglo1.Onboarding.Application.DTO.Watchlist
 {
     public class WatchlistReviewOutputDTO
     {

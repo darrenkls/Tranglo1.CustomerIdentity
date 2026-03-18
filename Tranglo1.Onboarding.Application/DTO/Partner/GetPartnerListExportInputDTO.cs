@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner
+namespace Tranglo1.Onboarding.Application.DTO.Partner
 {
     public class GetPartnerListExportInputDTO
     {

@@ -9,11 +9,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.AdminManagement;
+using Tranglo1.Onboarding.Application.MediatR;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetKYCComplianceOfficerQuery : BaseQuery<Result<IEnumerable<KYCComplianceOfficerOutputDTO>>>
     {

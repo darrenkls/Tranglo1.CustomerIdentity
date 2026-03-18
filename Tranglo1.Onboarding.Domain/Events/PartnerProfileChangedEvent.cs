@@ -1,7 +1,7 @@
 ﻿using System;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 
-namespace Tranglo1.CustomerIdentity.Domain.Events
+namespace Tranglo1.Onboarding.Domain.Events
 {
     public class PartnerProfileChangedEvent
     {

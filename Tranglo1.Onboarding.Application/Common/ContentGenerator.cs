@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Common
+namespace Tranglo1.Onboarding.Application.Common
 {
     public class ContentGenerator
     {

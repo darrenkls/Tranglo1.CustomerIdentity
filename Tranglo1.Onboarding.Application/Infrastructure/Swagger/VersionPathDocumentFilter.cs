@@ -2,7 +2,7 @@
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Swagger
+namespace Tranglo1.Onboarding.Application.Infrastructure.Swagger
 {
 	internal class VersionPathDocumentFilter : IDocumentFilter
 	{

@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate.Requisitions;
-using Tranglo1.CustomerIdentity.Infrastructure.Event;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate.Requisitions;
+using Tranglo1.Onboarding.Infrastructure.Event;
+using Tranglo1.Onboarding.Infrastructure.Services;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Persistence
+namespace Tranglo1.Onboarding.Infrastructure.Persistence
 {
     public class RBADBContext : BaseDbContext
     {

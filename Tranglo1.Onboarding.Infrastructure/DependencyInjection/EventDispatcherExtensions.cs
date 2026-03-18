@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Infrastructure.Event;
+using Tranglo1.Onboarding.Infrastructure.Event;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

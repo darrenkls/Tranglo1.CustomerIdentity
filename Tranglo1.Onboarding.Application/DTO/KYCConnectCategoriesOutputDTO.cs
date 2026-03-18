@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.IdentityServer.DTO
+﻿namespace Tranglo1.Onboarding.Application.DTO
 {
     public class KYCConnectCategoriesOutputDTO
     {

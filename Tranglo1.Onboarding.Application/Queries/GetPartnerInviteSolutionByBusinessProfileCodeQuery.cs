@@ -5,13 +5,13 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.SignUpCode;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Command;
+using Tranglo1.Onboarding.Application.DTO.CustomerUser;
+using Tranglo1.Onboarding.Application.DTO.SignUpCode;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetPartnerInviteSolutionByBusinessProfileCodeQuery : BaseCommand<Result<PartnerInviteSolutionByBusinessProfileOutputDTO>>
     {

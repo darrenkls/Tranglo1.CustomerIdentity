@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 using CSharpFunctionalExtensions;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate
+namespace Tranglo1.Onboarding.Domain.Entities.RBAAggregate
 {
     public class RBA : Entity
     {

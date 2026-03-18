@@ -8,16 +8,16 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.OnlineAMLCFTQuestionnaires;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.OnlineAMLCFTQuestionnaires;
+using Tranglo1.Onboarding.Infrastructure.Services;
 using Tranglo1.UserAccessControl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     //[Permission(PermissionGroupCode.KYCOnlineAMLCFTQuestionnaires, UACAction.Edit)]
     internal class UpdateQuestionnaireStatusCommand : BaseCommand<Result<QuestionnaireListOutputDTO>>

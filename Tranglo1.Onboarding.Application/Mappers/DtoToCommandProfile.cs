@@ -1,23 +1,23 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
-using Tranglo1.CustomerIdentity.IdentityServer.CustomerUserList.Commands;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.BusinessProfile;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CommentAndReviewRemarks;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.ComplianceOfficers;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Declarations;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.LicenseInformation;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration;
-using Tranglo1.CustomerIdentity.IdentityServer.Models;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
+using Tranglo1.Onboarding.Application.Command;
+using Tranglo1.Onboarding.Application.CustomerUserList.Commands;
+using Tranglo1.Onboarding.Application.DTO;
+using Tranglo1.Onboarding.Application.DTO.BusinessProfile;
+using Tranglo1.Onboarding.Application.DTO.CommentAndReviewRemarks;
+using Tranglo1.Onboarding.Application.DTO.ComplianceOfficers;
+using Tranglo1.Onboarding.Application.DTO.CustomerUser;
+using Tranglo1.Onboarding.Application.DTO.Declarations;
+using Tranglo1.Onboarding.Application.DTO.Documentation;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.AdminManagement;
+using Tranglo1.Onboarding.Application.DTO.LicenseInformation;
+using Tranglo1.Onboarding.Application.DTO.Partner;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerRegistration;
+using Tranglo1.Onboarding.Application.Models;
+using Tranglo1.Onboarding.Application.Queries;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Mappers
+namespace Tranglo1.Onboarding.Application.Mappers
 {
 	internal class DtoToCommandProfile : Profile
 	{

@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Persistance;
+using Tranglo1.Onboarding.Application.Infrastructure.Persistance;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Security
+namespace Tranglo1.Onboarding.Application.Security
 {
 	internal class AuditLogManager : IAuditLogManager
 	{

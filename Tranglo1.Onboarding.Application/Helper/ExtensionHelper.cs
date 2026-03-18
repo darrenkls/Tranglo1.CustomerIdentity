@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Helper
+namespace Tranglo1.Onboarding.Application.Helper
 {
     public static class ExtensionHelper
     {

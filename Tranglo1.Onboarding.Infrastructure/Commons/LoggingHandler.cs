@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Commons
+namespace Tranglo1.Onboarding.Infrastructure.Commons
 {
     public class LoggingHandler<T> : DelegatingHandler
     {

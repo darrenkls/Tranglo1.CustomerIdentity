@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq.Expressions;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.Specifications.BusinessProfiles
+namespace Tranglo1.Onboarding.Domain.Entities.Specifications.BusinessProfiles
 {
     public sealed class UnreadKYCCustomerSummaryFeedbackNotificationByBusinessProfile : Specification<KYCCustomerSummaryFeedbackNotification>
     {

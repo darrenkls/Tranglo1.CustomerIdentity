@@ -7,12 +7,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using Tranglo1.ApprovalWorkflowEngine;
 using Tranglo1.ApprovalWorkflowEngine.Models;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate.Requisitions;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.RBA;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate.Requisitions;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO.RBA;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     public class RejectRBARequisitionCommand : BaseCommand<Result<List<RejectRBARequisitionOutputDTO>>>
     {

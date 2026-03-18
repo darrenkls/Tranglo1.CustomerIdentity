@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CsvHelper;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Services
+namespace Tranglo1.Onboarding.Infrastructure.Services
 {
     public class CsvExporter
     {

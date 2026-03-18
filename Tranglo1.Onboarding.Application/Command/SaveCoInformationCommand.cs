@@ -7,17 +7,17 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using CSharpFunctionalExtensions;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
 using Serilog;
 using Microsoft.Extensions.Configuration;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     //[Permission(PermissionGroupCode.KYCCOInformation, UACAction.Edit)]
     [Permission(Permission.KYCManagementCOInformation.Action_Edit_Code,

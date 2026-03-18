@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Services
+namespace Tranglo1.Onboarding.Infrastructure.Services
 {
 	/// <summary>
 	/// The implementation of this interface should provide access to current

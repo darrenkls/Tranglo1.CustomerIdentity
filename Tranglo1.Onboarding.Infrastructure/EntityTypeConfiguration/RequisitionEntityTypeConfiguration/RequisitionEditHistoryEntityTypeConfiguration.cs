@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Tranglo1.ApprovalWorkflowEngine.Models;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.EntityTypeConfiguration.RequisitionEntityTypeConfiguration
+namespace Tranglo1.Onboarding.Infrastructure.EntityTypeConfiguration.RequisitionEntityTypeConfiguration
 {
     class RequisitionEditHistoryEntityTypeConfiguration : BaseEntityTypeConfiguration<RequisitionEditHistory>
     {

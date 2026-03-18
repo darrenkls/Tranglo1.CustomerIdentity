@@ -9,10 +9,10 @@ using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Application.DTO.Documentation;
+using Tranglo1.Onboarding.Application.MediatR;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetDocumentMetaData : BaseQuery<IEnumerable<DocumentMetaDataOutputDTO>>
     {

@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Helper
+namespace Tranglo1.Onboarding.Application.Helper
 {
     public static class SecurityStringGenerator
     {

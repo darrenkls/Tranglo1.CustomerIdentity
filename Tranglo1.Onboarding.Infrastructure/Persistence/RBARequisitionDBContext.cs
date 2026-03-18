@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Tranglo1.ApprovalWorkflowEngine.EntityFramework.DBContexts;
 using Tranglo1.ApprovalWorkflowEngine.Models;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate.Requisitions;
-using Tranglo1.CustomerIdentity.Infrastructure.Event;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate.Requisitions;
+using Tranglo1.Onboarding.Infrastructure.Event;
+using Tranglo1.Onboarding.Infrastructure.Services;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Persistence
+namespace Tranglo1.Onboarding.Infrastructure.Persistence
 {
     public class RBARequisitionDBContext : BaseDbContext, IApprovalWorkflowManagerDbContext<RBARequisition>
     {

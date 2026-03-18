@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation.AdminTemplateManagementInputDTO
+namespace Tranglo1.Onboarding.Application.DTO.Documentation.AdminTemplateManagementInputDTO
 {
     public class AdminTemplateManagementInputDTO
     {

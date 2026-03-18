@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Security
+namespace Tranglo1.Onboarding.Application.Security
 {
     public class AuthorizeCheckOperationFilter : IOperationFilter
     {

@@ -6,17 +6,17 @@ using Serilog;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Watchlist;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Notification;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Domain.ExternalServices.Watchlist;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO;
+using Tranglo1.Onboarding.Application.Services.Notification;
 using Tranglo1.UserAccessControl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     [Permission(Permission.KYCManagementDeclaration.Action_Submit_Review_Code,
         new int[] { (int)PortalCode.Admin, (int)PortalCode.Connect },

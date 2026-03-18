@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Infrastructure.Services;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
 	public static class UnitOfWorkExtensions
 	{
 		/// <summary>
-		/// All <seealso cref="Tranglo1.CustomerIdentity.Infrastructure.Persistence.BaseDbContext"/> that are 
+		/// All <seealso cref="Tranglo1.Onboarding.Infrastructure.Persistence.BaseDbContext"/> that are 
 		/// using the same connection string will share the same DbTransaction.
 		/// </summary>
 		/// <param name="services"></param>

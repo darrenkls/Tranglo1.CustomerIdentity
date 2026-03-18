@@ -1,7 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
 using System;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities
+namespace Tranglo1.Onboarding.Domain.Entities
 {
     public class PrimaryOfficer : Entity
     {

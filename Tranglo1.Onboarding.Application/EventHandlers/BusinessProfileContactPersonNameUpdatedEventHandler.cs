@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
-using Tranglo1.CustomerIdentity.Domain.Events;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.EventHandlers;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
+using Tranglo1.Onboarding.Domain.Events;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Common.EventHandlers;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.EventHandlers
+namespace Tranglo1.Onboarding.Application.EventHandlers
 {
     class BusinessProfileContactPersonNameUpdatedEventHandler : BaseEventHandler<BusinessProfileContactPersonNameUpdatedEvent>
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.PartnerManagement;
 
-namespace Tranglo1.CustomerIdentity.Domain.Events
+namespace Tranglo1.Onboarding.Domain.Events
 {
     public class ActiveInactivePartnerAccountStatusEvent : DomainEvent
     {

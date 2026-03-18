@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.Domain.Common.SingleScreening;
+using Tranglo1.Onboarding.Domain.Common.SingleScreening;
 
-namespace Tranglo1.CustomerIdentity.Domain.ExternalServices.Watchlist.Models.Requests
+namespace Tranglo1.Onboarding.Domain.ExternalServices.Watchlist.Models.Requests
 {
     public class WatchlistNotificationRequest
     {

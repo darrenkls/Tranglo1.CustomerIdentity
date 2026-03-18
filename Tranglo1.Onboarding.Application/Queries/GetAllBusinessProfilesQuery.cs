@@ -8,11 +8,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Application.DTO.CustomerUser;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetAllBusinessProfilesQuery : BaseQuery<List<GetAllBusinessProfilesOutputDTO>>
     {

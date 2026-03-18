@@ -6,12 +6,12 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Tranglo1.ApprovalWorkflowEngine;
-using Tranglo1.CustomerIdentity.Domain.Entities.Requisition;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.Entities.Requisition;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Application.MediatR;
 using Tranglo1.UserAccessControl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     //[Permission(PermissionGroupCode.KYCPartnerKYCApprovalList, UACAction.View)]
     internal class GetKYCApprovalRequisitionQuery : BaseQuery<Result<PartnerKYCStatusRequisition>>

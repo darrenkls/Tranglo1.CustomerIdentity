@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration
+namespace Tranglo1.Onboarding.Application.DTO.Partner.PartnerRegistration
 {
     public class PartnerRegistrationInputDTO
     {

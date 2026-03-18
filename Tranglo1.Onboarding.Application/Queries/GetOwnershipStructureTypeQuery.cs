@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
+namespace Tranglo1.Onboarding.Application.Queries
 {
     public class GetOwnershipStructureTypeQuery : IRequest<IEnumerable<KYCOwnershipStructureTypeOutputDTO>>
     {

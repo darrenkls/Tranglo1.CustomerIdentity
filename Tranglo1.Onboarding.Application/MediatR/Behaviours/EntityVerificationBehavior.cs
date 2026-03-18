@@ -9,17 +9,17 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Exceptions;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Identity;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Common.Exceptions;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerRegistration;
+using Tranglo1.Onboarding.Application.Queries;
+using Tranglo1.Onboarding.Application.Services.Identity;
+using Tranglo1.Onboarding.Infrastructure.Services;
 using Tranglo1.UserAccessControl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.MediatR.Behaviours
+namespace Tranglo1.Onboarding.Application.MediatR.Behaviours
 {
     public class EntityVerificationBehavior
     {

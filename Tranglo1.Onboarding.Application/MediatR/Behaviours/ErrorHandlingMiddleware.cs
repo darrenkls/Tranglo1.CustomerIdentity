@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using ValidationException = Tranglo1.CustomerIdentity.IdentityServer.Common.Exceptions.ValidationException;
+using ValidationException = Tranglo1.Onboarding.Application.Common.Exceptions.ValidationException;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Validations
+namespace Tranglo1.Onboarding.Application.Validations
 {
     public class ErrorHandlingMiddleware
     {

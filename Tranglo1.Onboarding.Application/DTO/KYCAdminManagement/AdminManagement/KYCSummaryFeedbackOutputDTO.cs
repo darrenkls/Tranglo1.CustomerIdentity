@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement
+namespace Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.AdminManagement
 {
     public class KYCSummaryFeedbackOutputDTO
     {

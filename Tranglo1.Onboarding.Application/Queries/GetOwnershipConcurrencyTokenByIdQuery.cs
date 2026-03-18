@@ -8,12 +8,12 @@ using System.Data;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.OwnershipAndManagementStructure;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO.OwnershipAndManagementStructure;
+using Tranglo1.Onboarding.Application.MediatR;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetOwnershipConcurrencyTokenByIdQuery  : BaseQuery<IEnumerable<OwnershipConcurrencyTokenOutputDTO>>
     {

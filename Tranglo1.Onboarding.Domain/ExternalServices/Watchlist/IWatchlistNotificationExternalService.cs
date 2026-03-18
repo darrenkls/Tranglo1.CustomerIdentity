@@ -1,9 +1,9 @@
 ﻿using CSharpFunctionalExtensions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common.SingleScreening;
+using Tranglo1.Onboarding.Domain.Common.SingleScreening;
 
-namespace Tranglo1.CustomerIdentity.Domain.ExternalServices.Watchlist
+namespace Tranglo1.Onboarding.Domain.ExternalServices.Watchlist
 {
     public interface IWatchlistNotificationExternalService
     {

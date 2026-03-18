@@ -2,7 +2,7 @@ using System.Reflection;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Tranglo1.CustomerIdentity.IdentityServer.Managers;
+using Tranglo1.Onboarding.Application.Managers;
 
 namespace Tranglo1.Onboarding.Application.DependencyInjection
 {

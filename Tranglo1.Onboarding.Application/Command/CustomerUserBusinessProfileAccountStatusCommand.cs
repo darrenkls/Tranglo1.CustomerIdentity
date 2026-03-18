@@ -7,18 +7,18 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using MediatR;
 using CSharpFunctionalExtensions;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Identity;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Services.Identity;
 using System.Linq;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.CustomerUser;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Application.Common.Constant;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     //[Permission(PermissionGroupCode.PartnerUser, UACAction.Edit)]
     [Permission(Permission.ManageStagingUser.Action_Update_Code,

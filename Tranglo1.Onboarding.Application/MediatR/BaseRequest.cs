@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.MediatR
+namespace Tranglo1.Onboarding.Application.MediatR
 {
 	/// <summary>
 	/// A base class representing a command or a query. Do not direct inherit from this 

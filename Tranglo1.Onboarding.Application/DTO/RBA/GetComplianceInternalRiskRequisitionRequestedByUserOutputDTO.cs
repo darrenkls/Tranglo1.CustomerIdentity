@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.RBA
+﻿namespace Tranglo1.Onboarding.Application.DTO.RBA
 {
     public class GetComplianceInternalRiskRequisitionRequestedByUserOutputDTO
     {

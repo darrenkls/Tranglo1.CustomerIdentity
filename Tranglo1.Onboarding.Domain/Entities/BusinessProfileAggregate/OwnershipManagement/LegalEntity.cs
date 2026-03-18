@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities
+namespace Tranglo1.Onboarding.Domain.Entities
 {
     public class LegalEntity : Entity
     {

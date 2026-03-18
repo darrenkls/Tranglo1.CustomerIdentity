@@ -13,16 +13,16 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Application.MediatR;
 using Tranglo1.UserAccessControl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetKYCWatchlistDetailsByEntityIdQuery: BaseQuery<Result<GetEntityDetailByReferenceCodeAndEntityIdResponse>>
     {

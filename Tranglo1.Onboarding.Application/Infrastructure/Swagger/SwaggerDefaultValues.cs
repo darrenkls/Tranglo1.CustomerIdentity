@@ -5,7 +5,7 @@ using System;
 using System.Linq;
 using System.Text.Json;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Swagger
+namespace Tranglo1.Onboarding.Application.Infrastructure.Swagger
 {
 	/// <summary>
 	/// Source: 

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Common.EventHandlers
+namespace Tranglo1.Onboarding.Application.Common.EventHandlers
 {
 	class EventWrapper<TEvent> : INotification where TEvent : DomainEvent
 	{

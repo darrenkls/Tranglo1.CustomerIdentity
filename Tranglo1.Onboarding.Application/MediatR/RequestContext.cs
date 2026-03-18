@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.MediatR
+namespace Tranglo1.Onboarding.Application.MediatR
 {
     public static class RequestContext
     {

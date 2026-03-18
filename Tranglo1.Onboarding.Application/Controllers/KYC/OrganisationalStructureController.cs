@@ -10,22 +10,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.Attributes;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.AffiliateAndSubsidiary;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.BoardofDirector;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.LegalEntitiy;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.OwnershipAndManagementStructure;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.OwnershipAndManagementStructure.AuthorisedPerson;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.ParentHoldingCompany;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.PoliticallyExposedPerson;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.PrimaryOfficer;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Shareholder;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
-using Tranglo1.CustomerIdentity.IdentityServer.Security;
+using Tranglo1.Onboarding.Application.Attributes;
+using Tranglo1.Onboarding.Application.Command;
+using Tranglo1.Onboarding.Application.DTO.AffiliateAndSubsidiary;
+using Tranglo1.Onboarding.Application.DTO.BoardofDirector;
+using Tranglo1.Onboarding.Application.DTO.LegalEntitiy;
+using Tranglo1.Onboarding.Application.DTO.OwnershipAndManagementStructure;
+using Tranglo1.Onboarding.Application.DTO.OwnershipAndManagementStructure.AuthorisedPerson;
+using Tranglo1.Onboarding.Application.DTO.ParentHoldingCompany;
+using Tranglo1.Onboarding.Application.DTO.PoliticallyExposedPerson;
+using Tranglo1.Onboarding.Application.DTO.PrimaryOfficer;
+using Tranglo1.Onboarding.Application.DTO.Shareholder;
+using Tranglo1.Onboarding.Application.Queries;
+using Tranglo1.Onboarding.Application.Security;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Controllers.KYC
+namespace Tranglo1.Onboarding.Application.Controllers.KYC
 {
     [ApiController]
     [Authorize(Policy = AuthenticationPolicies.InternalOrExternalPolicy)]

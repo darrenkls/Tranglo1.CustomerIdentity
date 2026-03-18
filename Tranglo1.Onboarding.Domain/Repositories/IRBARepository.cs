@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate.Requisitions;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate.Requisitions;
 
-namespace Tranglo1.CustomerIdentity.Domain.Repositories
+namespace Tranglo1.Onboarding.Domain.Repositories
 {
     public interface IRBARepository
     {

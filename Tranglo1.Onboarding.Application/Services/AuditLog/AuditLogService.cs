@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.Security;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Application.Security;
+using Tranglo1.Onboarding.Infrastructure.Services;
 using System.Security.Claims;
 using System.Threading;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Services
+namespace Tranglo1.Onboarding.Application.Services
 {
     internal class AuditLogService : IAuditLogService
     {

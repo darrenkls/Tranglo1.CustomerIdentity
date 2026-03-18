@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Documentation
+namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Documentation
 {
     public class InternalDocumentUpload : Entity
     {

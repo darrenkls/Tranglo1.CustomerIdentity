@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.CustomerUserList.Commands;
-using Tranglo1.CustomerIdentity.IdentityServer.Models;
+using Tranglo1.Onboarding.Application.CustomerUserList.Commands;
+using Tranglo1.Onboarding.Application.Models;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Mappers.MappingActions
+namespace Tranglo1.Onboarding.Application.Mappers.MappingActions
 {
 	internal class RecaptchaTokenSetter : IMappingAction<RegisterInputModel, RegisterCustomerUserCommand>
 	{

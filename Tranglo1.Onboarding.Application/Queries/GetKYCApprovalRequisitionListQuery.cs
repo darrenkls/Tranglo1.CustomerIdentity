@@ -8,13 +8,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.AdminManagement;
+using Tranglo1.Onboarding.Application.MediatR;
 using Tranglo1.UserAccessControl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     //[Permission(PermissionGroupCode.KYCPartnerKYCApprovalList, UACAction.View)]
     [Permission(Permission.KYCManagementPartnerKYCApprovalList.Action_View_Code,

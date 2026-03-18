@@ -9,20 +9,20 @@ using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.IdentityServer.Attributes;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerOnboarding;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerSubscription;
-using Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Swagger;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
-using Tranglo1.CustomerIdentity.IdentityServer.Security;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Application.Attributes;
+using Tranglo1.Onboarding.Application.Command;
+using Tranglo1.Onboarding.Application.DTO;
+using Tranglo1.Onboarding.Application.DTO.Partner;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerOnboarding;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerRegistration;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerSubscription;
+using Tranglo1.Onboarding.Application.Infrastructure.Swagger;
+using Tranglo1.Onboarding.Application.Queries;
+using Tranglo1.Onboarding.Application.Security;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Controllers
+namespace Tranglo1.Onboarding.Application.Controllers
 {
     #region Partner
     [ApiController]

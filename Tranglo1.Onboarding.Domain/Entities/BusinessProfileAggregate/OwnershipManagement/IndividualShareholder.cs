@@ -1,7 +1,7 @@
 ﻿using System;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate
+namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate
 {
     public class IndividualShareholder : Shareholder
     {

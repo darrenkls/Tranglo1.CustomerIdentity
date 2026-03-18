@@ -5,15 +5,15 @@ using System.Linq;
 using System.Threading;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.AMLCFTQuestionnaire;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Application.DTO.AMLCFTQuestionnaire;
+using Tranglo1.Onboarding.Application.MediatR;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
+using Tranglo1.Onboarding.Application.Common.Constant;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetDisplayRuleByQuestionnaireCodeQuery : BaseQuery<AMLCFTDisplayRuleOutputDTO>
     {

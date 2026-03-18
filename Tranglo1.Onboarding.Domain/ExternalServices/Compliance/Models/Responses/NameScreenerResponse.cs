@@ -1,7 +1,7 @@
 ﻿using System;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models;
 
-namespace Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses
+namespace Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses
 {
     public class NameScreenerResponse
     {

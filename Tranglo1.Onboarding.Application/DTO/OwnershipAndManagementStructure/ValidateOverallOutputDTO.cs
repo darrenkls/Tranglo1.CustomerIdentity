@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.OwnershipAndManagementStructure
+namespace Tranglo1.Onboarding.Application.DTO.OwnershipAndManagementStructure
 {
     public class ValidateOverallOutputDTO
     {

@@ -4,13 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Requests;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses;
-using Tranglo1.CustomerIdentity.Infrastructure.Extensions;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Requests;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses;
+using Tranglo1.Onboarding.Infrastructure.Extensions;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.ExternalServices
+namespace Tranglo1.Onboarding.Infrastructure.ExternalServices
 {
     public class ComplianceExternalService : IComplianceExternalService
     {

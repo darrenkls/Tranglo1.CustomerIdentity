@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
 
-namespace Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses
+namespace Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses
 {
     public class GetEntityDetailByReferenceCodeAndEntityIdResponse
     {

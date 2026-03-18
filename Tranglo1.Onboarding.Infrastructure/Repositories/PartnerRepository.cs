@@ -4,14 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement;
-using Tranglo1.CustomerIdentity.Domain.Events;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.PartnerManagement;
+using Tranglo1.Onboarding.Domain.Events;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Repositories
+namespace Tranglo1.Onboarding.Infrastructure.Repositories
 {
     public class PartnerRepository : IPartnerRepository
     {

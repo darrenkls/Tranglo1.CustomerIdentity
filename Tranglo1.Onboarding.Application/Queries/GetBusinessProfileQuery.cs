@@ -4,21 +4,21 @@ using Microsoft.Extensions.Logging;
 using MediatR;
 using CSharpFunctionalExtensions;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.DomainServices;
 using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.BusinessProfile;
+using Tranglo1.Onboarding.Application.DTO.BusinessProfile;
 using AutoMapper;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Domain.Repositories;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
 using System.Linq;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     //[Permission(PermissionGroupCode.KYCBusinessProfile, UACAction.View)]
     [Permission(Permission.KYCManagementBusinessProfile.Action_View_Code,

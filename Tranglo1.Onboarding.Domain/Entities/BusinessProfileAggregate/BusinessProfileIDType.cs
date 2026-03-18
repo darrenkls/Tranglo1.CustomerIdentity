@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate
+namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate
 {
     public class BusinessProfileIDType : Enumeration
     {

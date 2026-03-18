@@ -3,13 +3,13 @@ using CSharpFunctionalExtensions;
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Application.DTO.CustomerUser;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetConnectOnboardingStatusQuery : BaseQuery<Result<ConnectOnboardingStatusOutputDTO>>
     {

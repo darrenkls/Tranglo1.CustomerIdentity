@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Common.Wrappers
+namespace Tranglo1.Onboarding.Application.Common.Wrappers
 {
     public class Response<T>
     {

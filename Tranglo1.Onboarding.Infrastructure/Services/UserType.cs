@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Services
+namespace Tranglo1.Onboarding.Infrastructure.Services
 {
 	public enum UserType
 	{

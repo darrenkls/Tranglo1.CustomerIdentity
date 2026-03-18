@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.Domain.Common.SingleScreening;
+using Tranglo1.Onboarding.Domain.Common.SingleScreening;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Watchlist
+namespace Tranglo1.Onboarding.Application.DTO.Watchlist
 {
     public class WatchlistNotificationInputDTO
     {

@@ -4,14 +4,14 @@ using System.Text;
 using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 using System.Linq;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
 using System.Threading;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Repositories
+namespace Tranglo1.Onboarding.Infrastructure.Repositories
 {
     public class ScreeningRepository : IScreeningRepository
     {

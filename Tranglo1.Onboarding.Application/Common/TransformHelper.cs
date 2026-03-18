@@ -7,7 +7,7 @@ using System.Xml;
 using System.Xml.XPath;
 using System.Xml.Xsl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Common
+namespace Tranglo1.Onboarding.Application.Common
 {
     public class TransformHelper
     {

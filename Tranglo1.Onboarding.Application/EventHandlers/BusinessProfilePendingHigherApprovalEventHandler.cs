@@ -1,31 +1,31 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.EventHandlers;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.Specifications.BusinessProfiles;
-using Tranglo1.CustomerIdentity.Domain.Entities.Specifications.CustomerUserBusinessProfileRoles;
-using Tranglo1.CustomerIdentity.Domain.Entities.Specifications.CustomerUserBusinessProfiles;
-using Tranglo1.CustomerIdentity.Domain.Events;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Application.Common.EventHandlers;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Domain.Entities.Specifications.BusinessProfiles;
+using Tranglo1.Onboarding.Domain.Entities.Specifications.CustomerUserBusinessProfileRoles;
+using Tranglo1.Onboarding.Domain.Entities.Specifications.CustomerUserBusinessProfiles;
+using Tranglo1.Onboarding.Domain.Events;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Domain.Common;
 using System.Linq;
 using System;
 using System.Xml;
 using System.Text;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Notification;
+using Tranglo1.Onboarding.Application.Services.Notification;
 using System.Net;
 using CSharpFunctionalExtensions;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.EmailNotification;
+using Tranglo1.Onboarding.Application.DTO.EmailNotification;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.CustomerUserList.EventHandlers
+namespace Tranglo1.Onboarding.Application.CustomerUserList.EventHandlers
 {
 	class BusinessProfilePendingHigherApprovalEventHandler : BaseEventHandler<BusinessProfilePendingHigherApprovalEvent> // INotificationHandler<DomainEventNotification<CustomerUserEmailVerifiedEvent>>
     {

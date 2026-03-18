@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.OwnershipAndManagementStructure.AuthorisedPerson
+namespace Tranglo1.Onboarding.Application.DTO.OwnershipAndManagementStructure.AuthorisedPerson
 {
     public class AuthorisedPersonInputDTO
     {

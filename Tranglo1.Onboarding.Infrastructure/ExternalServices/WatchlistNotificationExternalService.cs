@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common.SingleScreening;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Watchlist;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Watchlist.Models.Requests;
-using Tranglo1.CustomerIdentity.Infrastructure.Extensions;
+using Tranglo1.Onboarding.Domain.Common.SingleScreening;
+using Tranglo1.Onboarding.Domain.ExternalServices.Watchlist;
+using Tranglo1.Onboarding.Domain.ExternalServices.Watchlist.Models.Requests;
+using Tranglo1.Onboarding.Infrastructure.Extensions;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.ExternalServices
+namespace Tranglo1.Onboarding.Infrastructure.ExternalServices
 {
     public class WatchlistNotificationExternalService : IWatchlistNotificationExternalService
     {

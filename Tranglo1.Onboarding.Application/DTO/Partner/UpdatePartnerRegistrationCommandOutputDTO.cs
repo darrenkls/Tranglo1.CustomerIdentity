@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner
+namespace Tranglo1.Onboarding.Application.DTO.Partner
 {
     public class UpdatePartnerRegistrationCommandOutputDTO
     {

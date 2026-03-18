@@ -1,7 +1,7 @@
-﻿using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
+﻿using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Watchlist
+namespace Tranglo1.Onboarding.Application.DTO.Watchlist
 {
     public class WatchlistReviewInputDTO
     {

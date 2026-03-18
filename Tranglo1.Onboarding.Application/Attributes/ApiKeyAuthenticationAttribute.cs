@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Attributes
+namespace Tranglo1.Onboarding.Application.Attributes
 {
     [AttributeUsage(validOn: AttributeTargets.Class | AttributeTargets.Method)]
     public class ApiKeyAuthenticationAttribute : Attribute, IAsyncActionFilter

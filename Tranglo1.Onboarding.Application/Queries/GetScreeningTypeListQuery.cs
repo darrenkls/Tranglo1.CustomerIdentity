@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Application.MediatR;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetScreeningTypeListQuery : BaseQuery<IEnumerable<ScreeningDetailsCategoryOutputDTO>>
     {

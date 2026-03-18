@@ -11,21 +11,21 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.EmailNotification;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Notification;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.PartnerManagement;
+using Tranglo1.Onboarding.Application.DTO.EmailNotification;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.Partner;
+using Tranglo1.Onboarding.Application.Services.Notification;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.IdentityServer.Managers;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Application.Managers;
+using Tranglo1.Onboarding.Domain.Common;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
+using Tranglo1.Onboarding.Domain.Repositories;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
 	//[Permission(PermissionGroupCode.PartnerAPISetting, UACAction.Edit)]
     internal class UpdatePartnerApiSettingsCommand : BaseCommand<Result>
@@ -137,7 +137,7 @@ namespace Tranglo1.CustomerIdentity.IdentityServer.Command
                         IPAddressEnd = whitelistItem.IPAddressEnd,
                         IsRangeIP = whitelistItem.IsRangeIPAddress,
                         IsWhitelisted = false,
-                        Environment = (int)Tranglo1.CustomerIdentity.Domain.Entities.Environment.Staging.Id,
+                        Environment = (int)Tranglo1.Onboarding.Domain.Entities.Environment.Staging.Id,
                     };
                     await _partnerService.AddWhiteListAsync(ip);
                 }
@@ -215,18 +215,18 @@ namespace Tranglo1.CustomerIdentity.IdentityServer.Command
 
             if (stagePartnerAPISetting.IsREST == true && stagePartnerAPISetting.IsSOAP == false)
             {
-                var apiUrl = await _partnerService.GetApiUrlAsync((int)Tranglo1.CustomerIdentity.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(1));
+                var apiUrl = await _partnerService.GetApiUrlAsync((int)Tranglo1.Onboarding.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(1));
                 stringDomain = apiUrl.StringDomain;
             }
             if (stagePartnerAPISetting.IsREST == false && stagePartnerAPISetting.IsSOAP == true)
             {
-                var apiUrl = await _partnerService.GetApiUrlAsync((int)Tranglo1.CustomerIdentity.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(2));
+                var apiUrl = await _partnerService.GetApiUrlAsync((int)Tranglo1.Onboarding.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(2));
                 stringDomain = apiUrl.StringDomain;
             }
             if (stagePartnerAPISetting.IsREST == true && stagePartnerAPISetting.IsSOAP == true)
             {
-                var apiUrl = await _partnerService.GetApiUrlAsync((int)Tranglo1.CustomerIdentity.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(1));
-                var apiUrl2 = await _partnerService.GetApiUrlAsync((int)Tranglo1.CustomerIdentity.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(2));
+                var apiUrl = await _partnerService.GetApiUrlAsync((int)Tranglo1.Onboarding.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(1));
+                var apiUrl2 = await _partnerService.GetApiUrlAsync((int)Tranglo1.Onboarding.Domain.Entities.Environment.Staging.Id, Enumeration.FindById<APIType>(2));
 
                 stringDomain = apiUrl.StringDomain;
                 stringDomain2 = apiUrl2.StringDomain;

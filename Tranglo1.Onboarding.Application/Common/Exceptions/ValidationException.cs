@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Common.Exceptions
+namespace Tranglo1.Onboarding.Application.Common.Exceptions
 {
     public class ValidationException : Exception
     {

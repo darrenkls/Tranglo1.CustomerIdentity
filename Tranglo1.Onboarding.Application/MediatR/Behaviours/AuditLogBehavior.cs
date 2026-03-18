@@ -5,10 +5,10 @@ using System;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.IdentityServer.Security;
-using Tranglo1.CustomerIdentity.IdentityServer.Services;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Application.Security;
+using Tranglo1.Onboarding.Application.Services;
+using Tranglo1.Onboarding.Infrastructure.Services;
 using Tranglo1.UserAccessControl;
 
 namespace MediatR

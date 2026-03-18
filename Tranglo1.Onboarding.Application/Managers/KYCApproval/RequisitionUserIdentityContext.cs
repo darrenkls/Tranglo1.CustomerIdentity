@@ -9,10 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
 using Dapper;
 using System.Data;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Identity;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Services.Identity;
+using Tranglo1.Onboarding.Domain.Repositories;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Managers.KYCApproval
+namespace Tranglo1.Onboarding.Application.Managers.KYCApproval
 {
     public class RequisitionUserIdentityContext : IUserIdentityContext
     {
