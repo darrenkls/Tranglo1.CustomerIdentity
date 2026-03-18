@@ -45,6 +45,37 @@
     <Compile Remove="Entities\PartnerType.cs" />
     <Compile Remove="Entities\BusinessProfileAggregate\CustomerUserBusinessProfile.cs" />
     <Compile Remove="Entities\ApplicationUserAggregrate\TrangloStaffEntityAssignment.cs" />
+    <!-- Phase 2: Onboarding entities moved to Tranglo1.Onboarding.Domain -->
+    <Compile Remove="Entities\BusinessProfileAggregate\**" />
+    <Compile Remove="Entities\PartnerManagement\**" />
+    <Compile Remove="Entities\ScreeningAggregate\**" />
+    <Compile Remove="Entities\RBAAggregate\**" />
+    <Compile Remove="Entities\Requisition\**" />
+    <Compile Remove="Entities\Specifications\**" />
+    <!-- Phase 2: Onboarding repository interfaces -->
+    <Compile Remove="Repositories\IBusinessProfileRepository.cs" />
+    <Compile Remove="Repositories\IPartnerRepository.cs" />
+    <Compile Remove="Repositories\IScreeningRepository.cs" />
+    <Compile Remove="Repositories\IRBARepository.cs" />
+    <!-- Phase 2: Onboarding domain services -->
+    <Compile Remove="DomainServices\PartnerService.cs" />
+    <Compile Remove="DomainServices\BusinessProfileService.cs" />
+    <Compile Remove="DomainServices\ComplianceScreeningService.cs" />
+    <Compile Remove="DomainServices\RBAService.cs" />
+    <!-- Phase 2: Onboarding events -->
+    <Compile Remove="Events\ActiveInactivePartnerAccountStatusEvent.cs" />
+    <Compile Remove="Events\BusinessProfileContactPersonNameUpdatedEvent.cs" />
+    <Compile Remove="Events\BusinessProfilePendingHigherApprovalEvent.cs" />
+    <Compile Remove="Events\BusinessProfileRegisteredEvent.cs" />
+    <Compile Remove="Events\BusinessProfileRejectedEvent.cs" />
+    <Compile Remove="Events\PartnerOnboardingEmailEvent.cs" />
+    <Compile Remove="Events\PartnerOnboardingEmailLiveEmailEvent.cs" />
+    <Compile Remove="Events\PartnerProfileChangedEvent.cs" />
+    <Compile Remove="Events\PartnerSubmissionEmailEvent.cs" />
+    <Compile Remove="Events\SubmissionResubmissionEmailEvent.cs" />
+    <!-- Phase 2: Onboarding external services -->
+    <Compile Remove="ExternalServices\Compliance\**" />
+    <Compile Remove="ExternalServices\Watchlist\**" />
   </ItemGroup>
 
   <ItemGroup>
