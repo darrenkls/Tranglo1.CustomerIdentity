@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tranglo1.CustomerIdentity.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tranglo1.CustomerIdentity.Infrastructure", "Tranglo1.CustomerIdentity.Infrastructure\Tranglo1.CustomerIdentity.Infrastructure.csproj", "{A00CF5C9-906B-46B7-89C6-D8B846695184}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tranglo1.Onboarding.Infrastructure", "Tranglo1.Onboarding.Infrastructure\Tranglo1.Onboarding.Infrastructure.csproj", "{C1D2E3F4-A5B6-7890-ABCD-EF1234567892}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{942AD29C-61BB-4549-A67D-55A44BB1797D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tranglo1.CustomerIdentity.Registration.Test", "test\Tranglo1.CustomerIdentity.Registration.Test\Tranglo1.CustomerIdentity.Registration.Test.csproj", "{95DE396E-A214-46E9-B3B1-41A0CEB03E15}"
@@ -77,6 +79,10 @@ Global
 		{6DE52203-FF1F-4D09-8491-A7AE2AAD7AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DE52203-FF1F-4D09-8491-A7AE2AAD7AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DE52203-FF1F-4D09-8491-A7AE2AAD7AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D2E3F4-A5B6-7890-ABCD-EF1234567892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D2E3F4-A5B6-7890-ABCD-EF1234567892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D2E3F4-A5B6-7890-ABCD-EF1234567892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D2E3F4-A5B6-7890-ABCD-EF1234567892}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A00CF5C9-906B-46B7-89C6-D8B846695184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A00CF5C9-906B-46B7-89C6-D8B846695184}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A00CF5C9-906B-46B7-89C6-D8B846695184}.Release|Any CPU.ActiveCfg = Release|Any CPU
