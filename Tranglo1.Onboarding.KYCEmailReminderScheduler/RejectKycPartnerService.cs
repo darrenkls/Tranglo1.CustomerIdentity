@@ -10,13 +10,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Notification;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.PartnerManagement;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.KYCEmailReminderScheduler.Notification;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler
 {
     public class ExpiredKycPartner
     {

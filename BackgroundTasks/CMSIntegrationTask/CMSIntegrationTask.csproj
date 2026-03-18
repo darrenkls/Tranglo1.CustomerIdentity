@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Tranglo1.CustomerIdentity.Domain\Tranglo1.CustomerIdentity.Domain.csproj" />
-    <ProjectReference Include="..\..\Tranglo1.CustomerIdentity.Infrastructure\Tranglo1.CustomerIdentity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Tranglo1.Onboarding.Domain\Tranglo1.Onboarding.Domain.csproj" />
+    <ProjectReference Include="..\..\Tranglo1.Onboarding.Infrastructure\Tranglo1.Onboarding.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

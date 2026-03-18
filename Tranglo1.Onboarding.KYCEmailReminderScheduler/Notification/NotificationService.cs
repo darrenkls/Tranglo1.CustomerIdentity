@@ -11,9 +11,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Notification
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler.Notification
 {
     public class NotificationService
     {

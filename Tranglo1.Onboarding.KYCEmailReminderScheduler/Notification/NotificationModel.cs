@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Notification
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler.Notification
 {
     public class SendNotificationInput
     {
