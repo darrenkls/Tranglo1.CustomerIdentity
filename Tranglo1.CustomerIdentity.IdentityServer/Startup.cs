@@ -44,6 +44,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using Tranglo1.Common.Cache;
+using Tranglo1.Onboarding.Application.DependencyInjection;
 using Tranglo1.CustomerIdentity.Domain.DomainServices;
 using Tranglo1.CustomerIdentity.Domain.Entities;
 using Tranglo1.CustomerIdentity.IdentityServer.AspNetCore.Builder;
@@ -548,7 +549,7 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
 
             //enable scalfolding pages for identity module
             services.AddRazorPages();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(Startup), typeof(Tranglo1.Onboarding.Application.OnboardingApplicationAssemblyMarker));
 
             /*Add all Application related DI*/
             services.AddScoped<IEventDispatcher, MediatREventDispatcher>();
@@ -557,7 +558,8 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
             //	MediatR does not support ordering for IPipelineBehavior yet as the time when 
             //	preparing this demo (https://github.com/jbogard/MediatR/pull/509)
             //	By default, ordering for IPipelineBehavior will depends on their registration sequence.
-            services.AddMediatR(Assembly.GetExecutingAssembly())
+            var onboardingAssembly = typeof(Tranglo1.Onboarding.Application.OnboardingApplicationAssemblyMarker).Assembly;
+            services.AddMediatR(Assembly.GetExecutingAssembly(), onboardingAssembly)
                 .AddScoped(typeof(IPipelineBehavior<,>), typeof(ErrorHandlingBehavior<,>))
                 .AddScoped(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>))
                 .AddScoped(typeof(IPipelineBehavior<,>), typeof(UserAccessControlBehaviour<,>))
@@ -581,6 +583,7 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
 
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            services.AddValidatorsFromAssembly(onboardingAssembly);
 
             // https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-IdentityServers/implement-http-call-retries-exponential-backoff-polly
             services.AddHttpClient();
@@ -595,6 +598,7 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
             services.AddScoped<IntegrationManager>();
             services.AddScoped<RBAService>();
             services.AddScoped<ApplicationUserService>();
+            services.AddOnboardingApplicationServices();
             services.AddHttpContextAccessor();
 
             //UAC Related
