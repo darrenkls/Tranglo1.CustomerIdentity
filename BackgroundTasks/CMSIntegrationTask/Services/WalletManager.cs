@@ -8,8 +8,8 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Services;
 
 namespace CMSIntegrationTask.Services
 {
@@ -103,8 +103,8 @@ namespace CMSIntegrationTask.Services
 						//log response
 						var cmsResp = JsonConvert.DeserializeObject<GetWalletRequisitionStatusOutputDto>(cmsApiResponse);
 
-						//List<Tranglo1.CustomerIdentity.Domain.Entities.PartnerRegistration> partnerRegistrations = new List<Tranglo1.CustomerIdentity.Domain.Entities.PartnerRegistration>();
-						List<Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement.PartnerSubscription> subscriptions = new List<Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement.PartnerSubscription>();
+						//List<Tranglo1.Onboarding.Domain.Entities.PartnerRegistration> partnerRegistrations = new List<Tranglo1.Onboarding.Domain.Entities.PartnerRegistration>();
+						List<Tranglo1.Onboarding.Domain.Entities.PartnerManagement.PartnerSubscription> subscriptions = new List<Tranglo1.Onboarding.Domain.Entities.PartnerManagement.PartnerSubscription>();
 
 						foreach (var t in cmsResp.Result.Where(x => x.Status == ((int)CMSStatus.Approve).ToString()))
 						{
@@ -114,7 +114,7 @@ namespace CMSIntegrationTask.Services
 								wallet.CMSStatus = t.Status;
 								//var partnerDetails = await PartnerRepository.GetPartnerDetailsByCodeAsync(t.T1_Partner_Key.Value);
 								var subscription = await PartnerRepository.GetSubscriptionAsync(t.T1_Partner_Key.Value);
-								subscription.Environment = Tranglo1.CustomerIdentity.Domain.Entities.Environment.Production;
+								subscription.Environment = Tranglo1.Onboarding.Domain.Entities.Environment.Production;
 								//await PartnerRepository.UpdatePartnerRegistrationAsync(partnerDetails);
 								await PartnerRepository.UpdateSubcriptionAsync(subscription);
 
@@ -136,7 +136,7 @@ namespace CMSIntegrationTask.Services
 						//foreach (var p in subscriptions)
 						//{
 						//	//only send email if partner is NOT supply partner
-						//	if(p.PartnerType.Id != Tranglo1.CustomerIdentity.Domain.Entities.PartnerType.Supply_Partner.Id)
+						//	if(p.PartnerType.Id != Tranglo1.Onboarding.Domain.Entities.PartnerType.Supply_Partner.Id)
       //                      {
 						//		var notificationResult = await NotificationService.SendNotificationAsync(p);
 						//	}

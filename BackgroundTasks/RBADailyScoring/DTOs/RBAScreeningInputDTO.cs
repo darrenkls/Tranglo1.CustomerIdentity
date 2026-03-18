@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate;
 
 namespace Tranglo1.RBADailyScoring.DTOs
 {

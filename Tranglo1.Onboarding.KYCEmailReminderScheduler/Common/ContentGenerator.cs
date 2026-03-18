@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Common
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler.Common
 {
     public class ContentGenerator
     {

@@ -10,13 +10,13 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Common.RBAScreening;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common.RBAScreening;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
 using Tranglo1.RBADailyScoring.DTOs;
-using static Tranglo1.CustomerIdentity.Domain.DomainServices.RBAService;
+using static Tranglo1.Onboarding.Domain.DomainServices.RBAService;
 
 namespace Tranglo1.RBADailyScoring.Jobs
 {

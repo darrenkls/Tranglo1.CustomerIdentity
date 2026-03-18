@@ -14,14 +14,14 @@ using Quartz.Spi;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Watchlist;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Commons;
-using Tranglo1.CustomerIdentity.Infrastructure.ExternalServices;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
-using Tranglo1.CustomerIdentity.Infrastructure.Repositories;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance;
+using Tranglo1.Onboarding.Domain.ExternalServices.Watchlist;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Commons;
+using Tranglo1.Onboarding.Infrastructure.ExternalServices;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Infrastructure.Repositories;
 
 namespace ProfileScreening
 {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Quartz;
-using Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Jobs;
+using Tranglo1.Onboarding.KYCEmailReminderScheduler.Jobs;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.DependencyInjection
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler.DependencyInjection
 {
     internal static class QuartzExtensions
     {

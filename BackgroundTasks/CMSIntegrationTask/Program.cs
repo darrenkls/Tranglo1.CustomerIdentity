@@ -11,10 +11,10 @@ using Serilog.Sinks.SystemConsole.Themes;
 using System;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
-using Tranglo1.CustomerIdentity.Infrastructure.Repositories;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Infrastructure.Repositories;
 
 namespace CMSIntegrationTask
 {

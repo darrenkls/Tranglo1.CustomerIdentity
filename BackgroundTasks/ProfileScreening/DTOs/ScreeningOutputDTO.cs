@@ -2,7 +2,7 @@
 using ProfileScreening.ValueObjects;
 using System.Collections.Generic;
 using System.Linq;
-using Tranglo1.CustomerIdentity.Domain.Common.SingleScreening;
+using Tranglo1.Onboarding.Domain.Common.SingleScreening;
 
 namespace ProfileScreening.DTOs
 {

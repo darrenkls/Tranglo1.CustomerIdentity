@@ -9,13 +9,13 @@ using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 using System;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
-using Tranglo1.CustomerIdentity.Infrastructure.Repositories;
-using Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.DependencyInjection;
-using Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Notification;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Infrastructure.Repositories;
+using Tranglo1.Onboarding.KYCEmailReminderScheduler.DependencyInjection;
+using Tranglo1.Onboarding.KYCEmailReminderScheduler.Notification;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler
 {
     internal class Program
     {

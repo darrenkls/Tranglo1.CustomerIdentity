@@ -5,7 +5,7 @@ using System.Xml;
 using System.Xml.XPath;
 using System.Xml.Xsl;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Common
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler.Common
 {
     public class TransformHelper
     {

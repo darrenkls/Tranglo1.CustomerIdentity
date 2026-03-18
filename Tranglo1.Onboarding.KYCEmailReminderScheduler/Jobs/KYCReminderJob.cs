@@ -4,7 +4,7 @@ using Quartz;
 using System;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.KYCEmailReminderScheduler.Jobs
+namespace Tranglo1.Onboarding.KYCEmailReminderScheduler.Jobs
 {
     internal class KYCReminderJob : IJob
     {
