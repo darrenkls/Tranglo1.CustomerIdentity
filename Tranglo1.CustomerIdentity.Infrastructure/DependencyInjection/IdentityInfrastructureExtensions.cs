@@ -6,6 +6,7 @@ using Polly.Extensions.Http;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Tranglo1.CustomerIdentity.Domain.DomainServices;
 using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance;
 using Tranglo1.CustomerIdentity.Domain.ExternalServices.Watchlist;
 using Tranglo1.CustomerIdentity.Domain.Repositories;
@@ -20,17 +21,23 @@ namespace Tranglo1.CustomerIdentity.Infrastructure.DependencyInjection
     {
         public static IServiceCollection AddIdentityInfrastructure(this IServiceCollection services, IConfiguration configuration, IHostEnvironment hostEnvironment)
         {
-            services.AddScoped<IBusinessProfileRepository, BusinessProfileRepository>();
-            services.AddScoped<IScreeningRepository, ScreeningRepository>();
-            services.AddScoped<IRBARepository, RBARepository>();
+            // Identity-specific repositories
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddScoped<IInvitationRepository, InvitationRepository>();
-            services.AddScoped<IPartnerRepository, PartnerRepository>();
             services.AddScoped<ITrangloRoleRepository, TrangloRoleRepository>();
             services.AddScoped<IExternalUserRoleRepository, ExternalUserRoleRepository>();
             services.AddScoped<ISignUpCodeRepository, SignUpCodeRepository>();
             services.AddScoped<IOtpRepository, OtpRepository>();
             services.AddScoped<ICountrySettingRepository, CountrySettingRepository>();
+
+            // Cross-domain service (bridges Identity -> Onboarding via Contracts)
+            services.AddScoped<IStaffEntityQueryService, StaffEntityQueryService>();
+
+            // Onboarding repositories (kept here temporarily for backward compatibility)
+            services.AddScoped<IBusinessProfileRepository, BusinessProfileRepository>();
+            services.AddScoped<IScreeningRepository, ScreeningRepository>();
+            services.AddScoped<IRBARepository, RBARepository>();
+            services.AddScoped<IPartnerRepository, PartnerRepository>();
             services.AddScoped<CsvExporter>();
 
             services.AddTransient<LoggingHandler<ComplianceExternalService>>();

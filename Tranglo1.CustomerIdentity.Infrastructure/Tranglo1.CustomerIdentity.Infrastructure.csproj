@@ -13,6 +13,28 @@
   <ItemGroup>
     <Compile Remove="Migrations\20201111165128_UpdateMigration.cs" />
     <Compile Remove="Migrations\20201111165128_UpdateMigration.Designer.cs" />
+    <!-- Phase 3: Onboarding persistence moved to Tranglo1.Onboarding.Infrastructure -->
+    <Compile Remove="Persistence\BusinessProfileDbContext.cs" />
+    <Compile Remove="Persistence\PartnerDBContext.cs" />
+    <Compile Remove="Persistence\ScreeningDBContext.cs" />
+    <Compile Remove="Persistence\RBADBContext.cs" />
+    <Compile Remove="Persistence\RBARequisitionDBContext.cs" />
+    <Compile Remove="Persistence\KYCPartnerStatusRequisitionDbContext.cs" />
+    <!-- Phase 3: Onboarding entity type configurations -->
+    <Compile Remove="EntityTypeConfiguration\BusinessProfileEntityTypeConfiguration\**" />
+    <Compile Remove="EntityTypeConfiguration\PartnerEntityTypeConfiguration\**" />
+    <Compile Remove="EntityTypeConfiguration\ScreeningEntityTypeConfiguration\**" />
+    <Compile Remove="EntityTypeConfiguration\RBAEntityTypeConfiguration\**" />
+    <Compile Remove="EntityTypeConfiguration\RequisitionEntityTypeConfiguration\**" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\**" />
+    <!-- Phase 3: Onboarding repositories -->
+    <Compile Remove="Repositories\BusinessProfileRepository.cs" />
+    <Compile Remove="Repositories\PartnerRepository.cs" />
+    <Compile Remove="Repositories\ScreeningRepository.cs" />
+    <Compile Remove="Repositories\RBARepository.cs" />
+    <!-- Phase 3: Onboarding external services -->
+    <Compile Remove="ExternalServices\ComplianceExternalService.cs" />
+    <Compile Remove="ExternalServices\WatchlistNotificationExternalService.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tranglo1.Identity.Contracts\Tranglo1.Identity.Contracts.csproj" />
     <ProjectReference Include="..\Tranglo1.CustomerIdentity.Domain\Tranglo1.CustomerIdentity.Domain.csproj" />
   </ItemGroup>
 
