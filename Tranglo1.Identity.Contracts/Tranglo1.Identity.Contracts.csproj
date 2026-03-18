@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <PackageId>Tranglo1.Identity.Contracts</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Tranglo</Authors>
+    <Description>Shared contracts for Tranglo Identity and Onboarding services</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSharpFunctionalExtensions" Version="2.12.2" />
+    <PackageReference Include="TimeZoneNames" Version="4.2.0" />
+  </ItemGroup>
+
+</Project>
