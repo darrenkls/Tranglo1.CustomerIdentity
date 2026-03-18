@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Infrastructure.Services;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.EntityTypeConfiguration
+namespace Tranglo1.Onboarding.Infrastructure.EntityTypeConfiguration
 {
 	internal abstract class BaseEntityTypeConfiguration<TEntity> : 
 		IEntityTypeConfiguration<TEntity> where TEntity : class

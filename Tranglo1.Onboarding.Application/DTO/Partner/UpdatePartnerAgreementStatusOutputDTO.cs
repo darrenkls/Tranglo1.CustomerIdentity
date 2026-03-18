@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner
+namespace Tranglo1.Onboarding.Application.DTO.Partner
 {
     public class UpdatePartnerAgreementStatusOutputDTO
     {

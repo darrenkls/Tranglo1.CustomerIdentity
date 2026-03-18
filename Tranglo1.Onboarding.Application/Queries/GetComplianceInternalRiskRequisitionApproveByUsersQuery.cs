@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 using System.Threading;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.RBA;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Application.DTO.RBA;
+using Tranglo1.Onboarding.Application.MediatR;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using Dapper;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetComplianceInternalRiskRequisitionApproveByUsersQuery : BaseQuery<IEnumerable<GetComplianceInternalRiskRequisitionApproveByUserOutputDTO>>
     {

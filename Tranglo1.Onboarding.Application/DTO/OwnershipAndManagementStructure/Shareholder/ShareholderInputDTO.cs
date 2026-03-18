@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Shareholder
+namespace Tranglo1.Onboarding.Application.DTO.Shareholder
 {
     public class ShareholderInputDTO
     {

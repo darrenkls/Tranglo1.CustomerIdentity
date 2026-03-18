@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.KYCCustomerSummaryFeedbackNotification
+﻿namespace Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.KYCCustomerSummaryFeedbackNotification
 {
     public class GetHasUnreadKYCCustomerSummaryFeedbackNotificationOutputDto
     {

@@ -7,12 +7,12 @@ using Dapper;
 using Microsoft.Extensions.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.OnlineAMLCFTQuestionnaires;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.OnlineAMLCFTQuestionnaires;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
+using Tranglo1.Onboarding.Application.Common.Constant;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     //[Permission(PermissionGroupCode.KYCOnlineAMLCFTQuestionnaires, UACAction.View)]
     [Permission(Permission.KYCAdministrationOnlineAMLCFTQuestionnaires.Action_View_Code,

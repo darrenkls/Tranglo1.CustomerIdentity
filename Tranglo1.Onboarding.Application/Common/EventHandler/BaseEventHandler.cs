@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Common.EventHandlers
+namespace Tranglo1.Onboarding.Application.Common.EventHandlers
 {
 	abstract class BaseEventHandler<TEvent> : INotificationHandler<EventWrapper<TEvent>> where TEvent : DomainEvent
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.BoardofDirector
+namespace Tranglo1.Onboarding.Application.DTO.BoardofDirector
 {
     public class BoardofDirectorInputDTO
     {

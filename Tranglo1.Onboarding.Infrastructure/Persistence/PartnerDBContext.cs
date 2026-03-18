@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement;
-using Tranglo1.CustomerIdentity.Domain.Events;
-using Tranglo1.CustomerIdentity.Infrastructure.Event;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.PartnerManagement;
+using Tranglo1.Onboarding.Domain.Events;
+using Tranglo1.Onboarding.Infrastructure.Event;
+using Tranglo1.Onboarding.Infrastructure.Services;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Persistence
+namespace Tranglo1.Onboarding.Infrastructure.Persistence
 {
     public class PartnerDBContext : BaseDbContext
     {

@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Watchlist;
+using Tranglo1.Onboarding.Application.DTO.Watchlist;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetRBACountersQuery : IRequest<RBACounterOutputDTO>
     {

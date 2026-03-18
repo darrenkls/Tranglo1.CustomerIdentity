@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities
+namespace Tranglo1.Onboarding.Domain.Entities
 {
     public class ScreeningInput : AggregateRoot
     {

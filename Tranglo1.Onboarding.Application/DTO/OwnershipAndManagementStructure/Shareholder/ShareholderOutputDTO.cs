@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.OwnershipAndManagementStructure.LegalEntitiy;
+using Tranglo1.Onboarding.Application.DTO.OwnershipAndManagementStructure.LegalEntitiy;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Shareholder
+namespace Tranglo1.Onboarding.Application.DTO.Shareholder
 {
     public class ShareholderOutputDTO
     {

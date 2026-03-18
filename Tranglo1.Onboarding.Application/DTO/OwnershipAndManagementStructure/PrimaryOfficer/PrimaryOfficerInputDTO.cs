@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.PrimaryOfficer
+namespace Tranglo1.Onboarding.Application.DTO.PrimaryOfficer
 {
     public class PrimaryOfficerInputDTO
     {

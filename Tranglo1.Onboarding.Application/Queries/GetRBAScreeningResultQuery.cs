@@ -6,14 +6,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using Tranglo1.ApprovalWorkflowEngine;
 using Tranglo1.ApprovalWorkflowEngine.Enum;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate.Requisitions;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.RBA;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate.Requisitions;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO.RBA;
+using Tranglo1.Onboarding.Application.MediatR;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetRBAScreeningResultQuery : BaseQuery<List<RBAResultsOutputDTO>>
     {

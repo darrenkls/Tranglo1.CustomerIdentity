@@ -9,13 +9,13 @@ using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.Documentation;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Application.Common.Constant;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner;
+using Tranglo1.Onboarding.Application.DTO.Partner;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetCreatedByQuery : BaseQuery<IEnumerable<CreatedByOutputDTO>>
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Text;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
+using Tranglo1.Onboarding.Domain.Repositories;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Services
+namespace Tranglo1.Onboarding.Infrastructure.Services
 {
 	public interface IUnitOfWork : IDisposable, IAsyncDisposable
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.OwnershipAndManagementStructure.LegalEntitiy
+namespace Tranglo1.Onboarding.Application.DTO.OwnershipAndManagementStructure.LegalEntitiy
 {
     public class ShareholderIndividualLegalEntityOutputDTO
     {

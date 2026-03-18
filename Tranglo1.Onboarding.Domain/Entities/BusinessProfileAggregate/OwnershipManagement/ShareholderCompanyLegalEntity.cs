@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Linq;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.OwnershipManagement
+namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.OwnershipManagement
 {
     public class ShareholderCompanyLegalEntity : LegalEntity
     {

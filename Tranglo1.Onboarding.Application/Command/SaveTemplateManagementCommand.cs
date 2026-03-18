@@ -7,14 +7,14 @@ using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.AMLCFTQuestionnaire;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation.AdminTemplateManagementInputDTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerSubscription;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.AMLCFTQuestionnaire;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO.Documentation;
+using Tranglo1.Onboarding.Application.DTO.Documentation.AdminTemplateManagementInputDTO;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerSubscription;
+using Tranglo1.Onboarding.Application.Queries;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     internal class SaveTemplateManagementCommand : BaseCommand<Result<bool>>
     {

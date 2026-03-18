@@ -2,10 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Verification;
-using Tranglo1.CustomerIdentity.Domain.Entities.Meta;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Verification;
+using Tranglo1.Onboarding.Domain.Entities.Meta;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.CustomerUserVerification
+namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.CustomerUserVerification
 {
     public class CustomerVerificationDocuments : Entity
     {

@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate.Requisitions;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate.Requisitions;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.EntityTypeConfiguration.RBAEntityTypeConfiguration.Requisitions
+namespace Tranglo1.Onboarding.Infrastructure.EntityTypeConfiguration.RBAEntityTypeConfiguration.Requisitions
 {
     class RBARequisitionEntityTypeConfiguration : BaseEntityTypeConfiguration<RBARequisition>
     {

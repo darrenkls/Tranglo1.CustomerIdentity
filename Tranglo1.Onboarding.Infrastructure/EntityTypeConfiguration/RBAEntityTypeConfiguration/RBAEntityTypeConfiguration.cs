@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.EntityTypeConfiguration.RBAEntityTypeConfiguration
+namespace Tranglo1.Onboarding.Infrastructure.EntityTypeConfiguration.RBAEntityTypeConfiguration
 {
     class RBAEntityTypeConfiguration : BaseEntityTypeConfiguration<RBA>
     {

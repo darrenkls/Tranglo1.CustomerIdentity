@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models
+﻿namespace Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models
 {
     public class Summary
     {

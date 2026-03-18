@@ -6,11 +6,11 @@ using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerVerification;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO.CustomerVerification;
 using Tranglo1.DocumentStorage;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     internal class SaveCustomerVerificationTemplateDocumentCommand : BaseCommand<Result<CustomerVerificationDocumentTemplatesOutputDTO>>
     {

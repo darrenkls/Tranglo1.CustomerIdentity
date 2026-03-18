@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement
+namespace Tranglo1.Onboarding.Domain.Entities.PartnerManagement
 {
     public class PartnerTPNMigrationDetail : Entity
     {

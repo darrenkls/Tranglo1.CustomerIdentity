@@ -1,6 +1,6 @@
-﻿using Tranglo1.CustomerIdentity.Domain.Common;
+﻿using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities
+namespace Tranglo1.Onboarding.Domain.Entities
 {
     public class ShareholderType : Enumeration
     {

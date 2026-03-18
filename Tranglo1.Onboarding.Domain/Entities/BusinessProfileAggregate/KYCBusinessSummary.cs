@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate
+﻿namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate
 {
     public class KYCBusinessSummary
     {

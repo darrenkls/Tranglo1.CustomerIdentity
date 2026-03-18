@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
 using TimeZoneNames;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.ExternalUserRole;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Meta;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.SignUpCode;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.TrangloRole;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
+using Tranglo1.Onboarding.Application.DTO.ExternalUserRole;
+using Tranglo1.Onboarding.Application.DTO.Meta;
+using Tranglo1.Onboarding.Application.DTO.Partner;
+using Tranglo1.Onboarding.Application.DTO.SignUpCode;
+using Tranglo1.Onboarding.Application.DTO.TrangloRole;
+using Tranglo1.Onboarding.Application.Queries;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Controllers
+namespace Tranglo1.Onboarding.Application.Controllers
 {
     [ApiController]
     [Route("/api/v{version:apiVersion}/meta")]

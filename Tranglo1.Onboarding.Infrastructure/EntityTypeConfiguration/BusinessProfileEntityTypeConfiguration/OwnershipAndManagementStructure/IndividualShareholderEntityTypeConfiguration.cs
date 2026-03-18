@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.EntityTypeConfiguration
+namespace Tranglo1.Onboarding.Infrastructure.EntityTypeConfiguration
 {
     
     class IndividualShareholderEntityTypeConfiguration : BaseEntityTypeConfiguration<IndividualShareholder>

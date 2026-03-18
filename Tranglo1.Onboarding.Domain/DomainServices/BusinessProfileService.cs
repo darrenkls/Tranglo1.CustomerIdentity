@@ -9,22 +9,22 @@ using System.Data;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.BusinessDeclaration;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Declaration;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Documentation;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
-using Tranglo1.CustomerIdentity.Domain.Entities.ExternalUserRoleAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement;
-using Tranglo1.CustomerIdentity.Domain.Entities.SignUpCodes;
-using Tranglo1.CustomerIdentity.Domain.Entities.Specifications.BusinessProfiles;
-using Tranglo1.CustomerIdentity.Domain.Entities.Specifications.Category;
-using Tranglo1.CustomerIdentity.Domain.Entities.Specifications.CustomerUserBusinessProfiles;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.BusinessDeclaration;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Declaration;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Documentation;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
+using Tranglo1.Onboarding.Domain.Entities.ExternalUserRoleAggregate;
+using Tranglo1.Onboarding.Domain.Entities.PartnerManagement;
+using Tranglo1.Onboarding.Domain.Entities.SignUpCodes;
+using Tranglo1.Onboarding.Domain.Entities.Specifications.BusinessProfiles;
+using Tranglo1.Onboarding.Domain.Entities.Specifications.Category;
+using Tranglo1.Onboarding.Domain.Entities.Specifications.CustomerUserBusinessProfiles;
+using Tranglo1.Onboarding.Domain.Repositories;
 
-namespace Tranglo1.CustomerIdentity.Domain.DomainServices
+namespace Tranglo1.Onboarding.Domain.DomainServices
 {
     public class BusinessProfileService
     {

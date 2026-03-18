@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate
+namespace Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate
 {
     public class Screening : Entity
     {

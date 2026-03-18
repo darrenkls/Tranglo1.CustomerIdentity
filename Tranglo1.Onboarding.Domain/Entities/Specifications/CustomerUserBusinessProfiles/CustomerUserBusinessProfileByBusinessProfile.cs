@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.Specifications.CustomerUserBusinessProfiles
+namespace Tranglo1.Onboarding.Domain.Entities.Specifications.CustomerUserBusinessProfiles
 {
     public class CustomerUserBusinessProfileByBusinessProfile : Specification<CustomerUserBusinessProfile>
     {

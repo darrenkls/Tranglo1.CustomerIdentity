@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Requests;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Requests;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses;
 
-namespace Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance
+namespace Tranglo1.Onboarding.Domain.ExternalServices.Compliance
 {
     public interface IComplianceExternalService
     {

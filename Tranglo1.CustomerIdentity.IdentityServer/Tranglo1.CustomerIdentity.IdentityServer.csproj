@@ -495,7 +495,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Tranglo1.CustomerIdentity.Domain\Tranglo1.CustomerIdentity.Domain.csproj" />
     <ProjectReference Include="..\Tranglo1.CustomerIdentity.Infrastructure\Tranglo1.CustomerIdentity.Infrastructure.csproj" />
-    <ProjectReference Include="..\Tranglo1.Onboarding.Application\Tranglo1.Onboarding.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

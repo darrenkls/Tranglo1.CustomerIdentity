@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
 
-namespace Tranglo1.CustomerIdentity.Domain.Repositories
+namespace Tranglo1.Onboarding.Domain.Repositories
 {
     public interface IScreeningRepository
     {

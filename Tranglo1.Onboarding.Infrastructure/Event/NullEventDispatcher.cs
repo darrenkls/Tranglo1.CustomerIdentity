@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Event
+namespace Tranglo1.Onboarding.Infrastructure.Event
 {
 	internal class NullEventDispatcher : IEventDispatcher
 	{

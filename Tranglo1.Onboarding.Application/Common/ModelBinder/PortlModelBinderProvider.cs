@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.AspNetCore.ModelBinding;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration;
+using Tranglo1.Onboarding.Application.AspNetCore.ModelBinding;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerRegistration;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Common.ModelBinder
+namespace Tranglo1.Onboarding.Application.Common.ModelBinder
 {
     public class PortlModelBinderProvider : IModelBinderProvider
     {

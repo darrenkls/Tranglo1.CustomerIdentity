@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common.SingleScreening;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Requests;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Watchlist;
+using Tranglo1.Onboarding.Domain.Common.SingleScreening;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Requests;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO.Watchlist;
 
-namespace Tranglo1.CustomerIdentity.Domain.DomainServices
+namespace Tranglo1.Onboarding.Domain.DomainServices
 {
     public class ComplianceScreeningService
     {

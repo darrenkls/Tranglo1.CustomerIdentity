@@ -12,27 +12,27 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Tranglo1.ApprovalWorkflowEngine.Models;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate.Requisitions;
-using Tranglo1.CustomerIdentity.IdentityServer.Attributes;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.BusinessProfile;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CommentAndReviewRemarks;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.ComplianceOfficers;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation.AdminTemplateManagementInputDTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation.AdminTemplateOutputDTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.RBA;
-using Tranglo1.CustomerIdentity.IdentityServer.Helper;
-using Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Swagger;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
-using Tranglo1.CustomerIdentity.IdentityServer.Security;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate.Requisitions;
+using Tranglo1.Onboarding.Application.Attributes;
+using Tranglo1.Onboarding.Application.Command;
+using Tranglo1.Onboarding.Application.DTO;
+using Tranglo1.Onboarding.Application.DTO.BusinessProfile;
+using Tranglo1.Onboarding.Application.DTO.CommentAndReviewRemarks;
+using Tranglo1.Onboarding.Application.DTO.ComplianceOfficers;
+using Tranglo1.Onboarding.Application.DTO.CustomerUser;
+using Tranglo1.Onboarding.Application.DTO.Documentation;
+using Tranglo1.Onboarding.Application.DTO.Documentation.AdminTemplateManagementInputDTO;
+using Tranglo1.Onboarding.Application.DTO.Documentation.AdminTemplateOutputDTO;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.AdminManagement;
+using Tranglo1.Onboarding.Application.DTO.RBA;
+using Tranglo1.Onboarding.Application.Helper;
+using Tranglo1.Onboarding.Application.Infrastructure.Swagger;
+using Tranglo1.Onboarding.Application.Queries;
+using Tranglo1.Onboarding.Application.Security;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Controllers.KYC
+namespace Tranglo1.Onboarding.Application.Controllers.KYC
 {
     [ApiController]
     [Authorize(Policy = AuthenticationPolicies.InternalOrExternalPolicy)]

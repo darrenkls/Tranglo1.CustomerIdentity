@@ -14,16 +14,16 @@ using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http.ModelBinding;
-using Tranglo1.CustomerIdentity.IdentityServer.Attributes;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerVerification;
-using Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Swagger;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
-using Tranglo1.CustomerIdentity.IdentityServer.Security;
+using Tranglo1.Onboarding.Application.Attributes;
+using Tranglo1.Onboarding.Application.Command;
+using Tranglo1.Onboarding.Application.DTO;
+using Tranglo1.Onboarding.Application.DTO.CustomerVerification;
+using Tranglo1.Onboarding.Application.Infrastructure.Swagger;
+using Tranglo1.Onboarding.Application.Queries;
+using Tranglo1.Onboarding.Application.Security;
 
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Controllers.KYC
+namespace Tranglo1.Onboarding.Application.Controllers.KYC
 {
     [ApiController]
     [Authorize(Policy = AuthenticationPolicies.InternalOrExternalPolicy)]

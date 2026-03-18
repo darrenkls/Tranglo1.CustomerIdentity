@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Declaration
+namespace Tranglo1.Onboarding.Application.DTO.Declaration
 {
     public class BusinessUserDeclarationInputDTO
     {

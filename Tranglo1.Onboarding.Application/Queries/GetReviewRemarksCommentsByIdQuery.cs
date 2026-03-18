@@ -7,21 +7,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CommentAndReviewRemarks;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.CommentAndReviewRemarks;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Application.Common.Constant;
 using Tranglo1.UserAccessControl;
 using Tranglo1.DocumentStorage;
 using System.IO;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     //[Permission(PermissionGroupCode.KYCDocumentation, UACAction.View)]
     [Permission(Permission.KYCManagementDocumentation.Action_ReviewRemark_Code,

@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance;
-using Tranglo1.CustomerIdentity.Domain.ExternalServices.Compliance.Models.Responses;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance;
+using Tranglo1.Onboarding.Domain.ExternalServices.Compliance.Models.Responses;
+using Tranglo1.Onboarding.Application.MediatR;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetKYCWatchlistDetailsQuery: BaseQuery<Result<List<GetEntityDetailByReferenceCodeResponse>>>
     {

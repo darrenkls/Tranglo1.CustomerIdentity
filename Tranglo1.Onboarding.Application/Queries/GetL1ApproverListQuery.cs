@@ -10,7 +10,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     public class GetL1ApproverListQuery : IRequest<Result<IEnumerable<GetL1ApproverListOutputDTO>>>
     {

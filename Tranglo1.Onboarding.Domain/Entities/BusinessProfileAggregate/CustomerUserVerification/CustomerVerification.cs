@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Entities.Meta;
+using Tranglo1.Onboarding.Domain.Entities.Meta;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Verification
+namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Verification
 {
     public class CustomerVerification : Entity
     {

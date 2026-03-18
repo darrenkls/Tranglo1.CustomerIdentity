@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.IdentityServer.Common.Constant
+﻿namespace Tranglo1.Onboarding.Application.Common.Constant
 {
     /// <summary>
     /// Constants for placeholder values.

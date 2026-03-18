@@ -1,22 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.AMLCFTQuestionnaire;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.BusinessDeclaration;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.CustomerUserVerification;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Declaration;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Documentation;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.TransactionEvaluation;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Verification;
-using Tranglo1.CustomerIdentity.Domain.Entities.ExternalUserRoleAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.Meta;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Infrastructure.Event;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
-using UserType = Tranglo1.CustomerIdentity.Domain.Entities.UserType;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.AMLCFTQuestionnaire;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.BusinessDeclaration;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.CustomerUserVerification;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Declaration;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Documentation;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.TransactionEvaluation;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Verification;
+using Tranglo1.Onboarding.Domain.Entities.ExternalUserRoleAggregate;
+using Tranglo1.Onboarding.Domain.Entities.Meta;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Infrastructure.Event;
+using Tranglo1.Onboarding.Infrastructure.Services;
+using UserType = Tranglo1.Onboarding.Domain.Entities.UserType;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Persistence
+namespace Tranglo1.Onboarding.Infrastructure.Persistence
 {
     public class BusinessProfileDbContext : BaseDbContext
     {

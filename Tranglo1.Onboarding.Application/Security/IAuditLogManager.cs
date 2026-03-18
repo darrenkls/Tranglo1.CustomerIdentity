@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Security
+namespace Tranglo1.Onboarding.Application.Security
 {
 	public interface IAuditLogManager
 	{

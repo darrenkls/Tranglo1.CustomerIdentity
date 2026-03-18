@@ -5,23 +5,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.AMLCFTQuestionnaire;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.BusinessDeclaration;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.CustomerUserVerification;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Declaration;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Documentation;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.TransactionEvaluation;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Verification;
-using Tranglo1.CustomerIdentity.Domain.Entities.Meta;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.AMLCFTQuestionnaire;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.BusinessDeclaration;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.CustomerUserVerification;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Declaration;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Documentation;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.OwnershipManagement;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.TransactionEvaluation;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Verification;
+using Tranglo1.Onboarding.Domain.Entities.Meta;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Repositories
+namespace Tranglo1.Onboarding.Infrastructure.Repositories
 {
     public class BusinessProfileRepository : IBusinessProfileRepository
     {

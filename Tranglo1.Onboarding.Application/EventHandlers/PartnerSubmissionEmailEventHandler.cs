@@ -3,24 +3,24 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.EventHandlers;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Notification;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Application.Common.EventHandlers;
+using Tranglo1.Onboarding.Application.Services.Notification;
 using System.IO;
 using System.Text;
 using System.Xml;
-using Tranglo1.CustomerIdentity.Domain.Events;
+using Tranglo1.Onboarding.Domain.Events;
 using System;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.EmailNotification;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.DTO.EmailNotification;
 using System.Collections.Generic;
-using Tranglo1.CustomerIdentity.Infrastructure.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Repositories;
 using CSharpFunctionalExtensions;
 using Microsoft.AspNetCore.Http;
 using System.Net;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.EventHandlers
+namespace Tranglo1.Onboarding.Application.EventHandlers
 {
     class PartnerSubmissionEmailEventHandler : BaseEventHandler<PartnerSubmissionEmailEvent>
     {

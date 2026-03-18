@@ -9,11 +9,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Tranglo1.ApprovalWorkflowEngine.Enum;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.RBA;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Application.DTO.RBA;
 
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     internal class GetRBARequisitionListingQuery : PagingOptions, IRequest<PagedResult<GetRBARequisitionListingOutputDTO>>
     { 

@@ -1,4 +1,4 @@
-﻿namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+﻿namespace Tranglo1.Onboarding.Application.Queries
 {
     public class GetKYCProgressOutputDto
     {

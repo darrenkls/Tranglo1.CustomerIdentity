@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.EmailNotification;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Application.DTO.EmailNotification;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Services.Notification
+namespace Tranglo1.Onboarding.Application.Services.Notification
 {
 	public interface INotificationService
 	{

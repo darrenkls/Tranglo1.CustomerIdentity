@@ -5,7 +5,7 @@ using System.Data.Common;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Services
+namespace Tranglo1.Onboarding.Infrastructure.Services
 {
 	public sealed class SqlServerUnitOfWork : IUnitOfWork
 	{

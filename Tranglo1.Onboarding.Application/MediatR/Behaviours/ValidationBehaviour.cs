@@ -7,7 +7,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ValidationException = Tranglo1.CustomerIdentity.IdentityServer.Common.Exceptions.ValidationException;
+using ValidationException = Tranglo1.Onboarding.Application.Common.Exceptions.ValidationException;
 
 namespace MediatR
 {

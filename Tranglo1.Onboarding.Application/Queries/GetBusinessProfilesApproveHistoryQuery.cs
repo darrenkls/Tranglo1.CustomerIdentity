@@ -3,26 +3,26 @@ using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities;
 using System.Data.SqlClient;
 using Dapper;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.BusinessProfile;
+using Tranglo1.Onboarding.Application.DTO.BusinessProfile;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Repositories;
 using IdentityServer4.Extensions;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR.Behaviours;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Exceptions;
-using Tranglo1.CustomerIdentity.IdentityServer.MediatR;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement;
+using Tranglo1.Onboarding.Application.MediatR.Behaviours;
+using Tranglo1.Onboarding.Application.Common.Exceptions;
+using Tranglo1.Onboarding.Application.MediatR;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.AdminManagement;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+namespace Tranglo1.Onboarding.Application.Queries
 {
     //[Permission(PermissionGroupCode.KYCApprovalHistory, UACAction.View)]
     [Permission(Permission.KYCApprovalHistory.Action_View_Code,

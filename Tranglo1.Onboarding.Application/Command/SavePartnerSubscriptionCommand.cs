@@ -15,19 +15,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.PartnerManagement;
-using Tranglo1.CustomerIdentity.Domain.Events;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.EmailNotification;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerSubscription;
-using Tranglo1.CustomerIdentity.IdentityServer.Managers;
-using Tranglo1.CustomerIdentity.IdentityServer.Services.Notification;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.PartnerManagement;
+using Tranglo1.Onboarding.Domain.Events;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Application.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.EmailNotification;
+using Tranglo1.Onboarding.Application.DTO.Partner.PartnerSubscription;
+using Tranglo1.Onboarding.Application.Managers;
+using Tranglo1.Onboarding.Application.Services.Notification;
 using Tranglo1.UserAccessControl;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     //[Permission(PermissionGroupCode.PartnerDetails, UACAction.Edit)]
     [Permission(Permission.ManagePartnerPartnerDetails.Action_Edit_Code,

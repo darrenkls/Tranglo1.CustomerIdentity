@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
-using Tranglo1.CustomerIdentity.Infrastructure.Persistence;
-namespace Tranglo1.CustomerIdentity.IdentityServer.Queries
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Repositories;
+using Tranglo1.Onboarding.Infrastructure.Persistence;
+namespace Tranglo1.Onboarding.Application.Queries
 {
     public class GetWatchlistStatusListQuery : IRequest<IEnumerable<WatchlistStatusListOutputDTO>>
     {

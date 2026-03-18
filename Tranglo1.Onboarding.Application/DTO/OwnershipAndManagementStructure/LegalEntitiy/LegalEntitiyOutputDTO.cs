@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.LegalEntitiy
+namespace Tranglo1.Onboarding.Application.DTO.LegalEntitiy
 {
     public class LegalEntitiyOutputDTO
     {

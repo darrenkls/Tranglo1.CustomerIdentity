@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.BusinessProfile
+namespace Tranglo1.Onboarding.Application.DTO.BusinessProfile
 {
     public class BusinessProfileInputDTO
     {

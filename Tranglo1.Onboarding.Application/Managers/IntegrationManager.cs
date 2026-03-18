@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 using Dapper;
 using System.Data;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
+using Tranglo1.Onboarding.Application.DTO;
 using Microsoft.Extensions.Logging;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Managers
+namespace Tranglo1.Onboarding.Application.Managers
 {
     public class IntegrationManager
     {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Attributes
+namespace Tranglo1.Onboarding.Application.Attributes
 {
     public class LogInputDTOAttribute : Attribute, IActionFilter, IOrderedFilter
     {

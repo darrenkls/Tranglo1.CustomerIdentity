@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement
+namespace Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.AdminManagement
 {
     public class KYCManagementInputDTO
     {

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.Domain.Entities.RBAAggregate;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities.RBAAggregate;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.RBA
+namespace Tranglo1.Onboarding.Application.DTO.RBA
 {
     public class RBAResultsOutputDTO
     {

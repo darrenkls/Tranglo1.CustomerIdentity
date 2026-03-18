@@ -1,10 +1,10 @@
 ﻿using CSharpFunctionalExtensions;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Domain.Entities.ScreeningAggregate;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Domain.Entities.ScreeningAggregate;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities
+namespace Tranglo1.Onboarding.Domain.Entities
 {
     public class ScreeningDetail : Entity
     {

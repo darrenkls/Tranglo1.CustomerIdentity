@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.DTO.Declaration
+namespace Tranglo1.Onboarding.Application.DTO.Declaration
 {
     public class GetBusinessUserKYCProgressOutputDTO
     {

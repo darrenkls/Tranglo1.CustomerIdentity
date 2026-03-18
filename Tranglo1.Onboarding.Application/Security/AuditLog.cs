@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Infrastructure.Services;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Security
+namespace Tranglo1.Onboarding.Application.Security
 {
 	public class AuditLog
 	{

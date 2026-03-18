@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
+using Tranglo1.Onboarding.Application.Command;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Validations
+namespace Tranglo1.Onboarding.Application.Validations
 {    
     public class SaveCommentsCommandValidator : AbstractValidator<SaveCommentsCommand>
     {

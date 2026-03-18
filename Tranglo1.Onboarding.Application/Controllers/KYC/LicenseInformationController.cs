@@ -9,16 +9,16 @@ using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
-using Tranglo1.CustomerIdentity.IdentityServer.Attributes;
-using Tranglo1.CustomerIdentity.IdentityServer.Command;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.LicenseInformation;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.LicenseInformation;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
-using Tranglo1.CustomerIdentity.IdentityServer.Security;
+using Tranglo1.Onboarding.Domain.Entities;
+using Tranglo1.Onboarding.Application.Attributes;
+using Tranglo1.Onboarding.Application.Command;
+using Tranglo1.Onboarding.Application.DTO;
+using Tranglo1.Onboarding.Application.DTO.KYCAdminManagement.LicenseInformation;
+using Tranglo1.Onboarding.Application.DTO.LicenseInformation;
+using Tranglo1.Onboarding.Application.Queries;
+using Tranglo1.Onboarding.Application.Security;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Controllers.KYC
+namespace Tranglo1.Onboarding.Application.Controllers.KYC
 {
     [ApiController]
     [Authorize(Policy = AuthenticationPolicies.InternalOrExternalPolicy)]

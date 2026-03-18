@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Entities;
+using Tranglo1.Onboarding.Domain.Entities;
 using CSharpFunctionalExtensions;
 using Tranglo1.UserAccessControl;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
-using Tranglo1.CustomerIdentity.IdentityServer.Queries;
-using Tranglo1.CustomerIdentity.Domain.Repositories;
+using Tranglo1.Onboarding.Domain.DomainServices;
+using Tranglo1.Onboarding.Application.Queries;
+using Tranglo1.Onboarding.Domain.Repositories;
 using System.Data.SqlClient;
 using Dapper;
 using System.Data;
 using Microsoft.Extensions.Configuration;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.AffiliateAndSubsidiary;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.AMLCFTQuestionnaire;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate;
-using Tranglo1.CustomerIdentity.IdentityServer.Common.Constant;
+using Tranglo1.Onboarding.Application.DTO.AffiliateAndSubsidiary;
+using Tranglo1.Onboarding.Application.DTO.AMLCFTQuestionnaire;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate;
+using Tranglo1.Onboarding.Application.Common.Constant;
 using System;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.TransactionEvaluation;
-using Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.TransactionEvaluation;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Application.DTO.TransactionEvaluation;
+using Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.TransactionEvaluation;
 using Serilog;
 
-namespace Tranglo1.CustomerIdentity.IdentityServer.Command
+namespace Tranglo1.Onboarding.Application.Command
 {
     class SaveTransactionEvaluationCommand : BaseCommand<Result<SaveTransactionEvaluationOutputDTO>>
     {

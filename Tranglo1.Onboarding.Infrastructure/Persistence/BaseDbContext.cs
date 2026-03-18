@@ -8,14 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Tranglo1.CustomerIdentity.Domain.Common;
-using Tranglo1.CustomerIdentity.Infrastructure.EntityTypeConfiguration;
-using Tranglo1.CustomerIdentity.Infrastructure.Event;
-using Tranglo1.CustomerIdentity.Infrastructure.Services;
+using Tranglo1.Onboarding.Domain.Common;
+using Tranglo1.Onboarding.Infrastructure.EntityTypeConfiguration;
+using Tranglo1.Onboarding.Infrastructure.Event;
+using Tranglo1.Onboarding.Infrastructure.Services;
 using System.Security.Claims;
-using Tranglo1.CustomerIdentity.Domain.DomainServices;
+using Tranglo1.Onboarding.Domain.DomainServices;
 
-namespace Tranglo1.CustomerIdentity.Infrastructure.Persistence
+namespace Tranglo1.Onboarding.Infrastructure.Persistence
 {
 	public abstract class BaseDbContext : DbContext
 	{

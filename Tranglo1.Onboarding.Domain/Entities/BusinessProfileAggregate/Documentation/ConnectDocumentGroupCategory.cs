@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tranglo1.CustomerIdentity.Domain.Common;
+using Tranglo1.Onboarding.Domain.Common;
 
-namespace Tranglo1.CustomerIdentity.Domain.Entities.BusinessProfileAggregate.Documentation
+namespace Tranglo1.Onboarding.Domain.Entities.BusinessProfileAggregate.Documentation
 {
     public class ConnectDocumentGroupCategory : Enumeration
     {
