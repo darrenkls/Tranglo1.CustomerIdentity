@@ -59,7 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tranglo1.Identity.Contracts\Tranglo1.Identity.Contracts.csproj" />
+    <PackageReference Include="Tranglo1.Identity.Contracts" Version="1.0.0" />
     <ProjectReference Include="..\Tranglo1.CustomerIdentity.Domain\Tranglo1.CustomerIdentity.Domain.csproj" />
   </ItemGroup>
 
