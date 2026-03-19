@@ -17,36 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Common\DomainEventService.cs" />
-    <Compile Remove="DomainServices\IDomainEvent.cs" />
-    <Compile Remove="DomainServices\IDomainEventServices.cs" />
-    <Compile Remove="Common\AggregateRoot.cs" />
-    <Compile Remove="Common\DomainEvent.cs" />
-    <Compile Remove="Common\IAggregateRoot.cs" />
-    <Compile Remove="Common\Enumeration.cs" />
-    <Compile Remove="Common\Specification.cs" />
-    <Compile Remove="Common\PageOptions.cs" />
-    <Compile Remove="Common\SortDirection.cs" />
-    <Compile Remove="Common\TCPortalOnboardingStatus.cs" />
-    <Compile Remove="Common\BusinessOnboardSummaryStatus.cs" />
-    <Compile Remove="Common\TimezoneConversion.cs" />
-    <Compile Remove="Common\Extensions\DateTimeExtension.cs" />
-    <Compile Remove="Common\Extensions\StringExtension.cs" />
-    <Compile Remove="Entities\Email.cs" />
-    <Compile Remove="Entities\ContactNumber.cs" />
-    <Compile Remove="Entities\CompanyUserAccountStatus.cs" />
-    <Compile Remove="Entities\CompanyUserBlockStatus.cs" />
-    <Compile Remove="Entities\SystemEnvironment.cs" />
-    <Compile Remove="Entities\Environment.cs" />
-    <Compile Remove="Entities\TrangloEntity.cs" />
-    <Compile Remove="Entities\CountryMeta.cs" />
-    <Compile Remove="Entities\Solution.cs" />
-    <Compile Remove="Entities\CustomerType.cs" />
-    <Compile Remove="Entities\PartnerType.cs" />
-    <Compile Remove="Entities\BusinessProfileAggregate\CustomerUserBusinessProfile.cs" />
-    <Compile Remove="Entities\ApplicationUserAggregrate\TrangloStaffEntityAssignment.cs" />
     <!-- Phase 2: Onboarding entities moved to Tranglo1.Onboarding.Domain -->
     <Compile Remove="Entities\BusinessProfileAggregate\**" />
+    <!-- Re-include shared entity needed by CustomerIdentity -->
+    <Compile Include="Entities\BusinessProfileAggregate\CustomerUserBusinessProfile.cs" />
     <Compile Remove="Entities\PartnerManagement\**" />
     <Compile Remove="Entities\ScreeningAggregate\**" />
     <Compile Remove="Entities\RBAAggregate\**" />
@@ -94,8 +68,5 @@
     <PackageReference Include="Tranglo1.ApprovalWorkflowEngine" Version="1.3.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Tranglo1.Identity.Contracts" Version="1.0.0" />
-  </ItemGroup>
 
 </Project>
