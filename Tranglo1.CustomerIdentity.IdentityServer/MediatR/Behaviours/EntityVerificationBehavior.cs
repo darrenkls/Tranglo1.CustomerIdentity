@@ -13,7 +13,6 @@ using Tranglo1.CustomerIdentity.Domain.DomainServices;
 using Tranglo1.CustomerIdentity.Domain.Entities;
 using Tranglo1.CustomerIdentity.Domain.Repositories;
 using Tranglo1.CustomerIdentity.IdentityServer.Common.Exceptions;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration;
 using Tranglo1.CustomerIdentity.IdentityServer.Queries;
 using Tranglo1.CustomerIdentity.IdentityServer.Services.Identity;
 using Tranglo1.CustomerIdentity.Infrastructure.Services;

@@ -27,9 +27,13 @@
     <Compile Remove="DTO\Declaration\**" />
     <Compile Remove="DTO\Declarations\**" />
     <Compile Remove="DTO\Documentation\**" />
-    <Compile Remove="DTO\KYCAdminManagement\**" />
+    <Compile Remove="DTO\KYCAdminManagement\KYCCustomerSummaryFeedbackNotification\**" />
+    <Compile Remove="DTO\KYCAdminManagement\LicenseInformation\**" />
+    <Compile Remove="DTO\KYCAdminManagement\OnlineAMLCFTQuestionnaires\**" />
     <Compile Remove="DTO\OwnershipAndManagementStructure\**" />
+    <!-- Exclude all Partner DTOs, then re-include PartnerRegistration (needed by Identity) -->
     <Compile Remove="DTO\Partner\**" />
+    <Compile Include="DTO\Partner\PartnerRegistration\**" />
     <Compile Remove="DTO\RBA\**" />
     <Compile Remove="DTO\TransactionEvaluation\**" />
     <Compile Remove="DTO\Watchlist\**" />
@@ -229,7 +233,11 @@
     <Compile Remove="Queries\PagedResultBase.cs" />
     <Compile Remove="Queries\PaginationInfoDTO.cs" />
     <Compile Remove="Queries\ReviewRemarksCommentsDto.cs" />
+    <Compile Remove="Queries\GetAdminTemplateList.cs" />
+    <!-- Phase 4: Onboarding Mappers (only contain onboarding AutoMapper profiles) -->
+    <Compile Remove="Mappers\DtoToQueryProfile.cs" />
     <!-- Phase 4: Onboarding Commands moved to Tranglo1.Onboarding.Application -->
+    <Compile Remove="Command\UpdateAPIPartnerSettingsCommand.cs" />
     <Compile Remove="Command\AddBusinessUserDeclarationSignatureCommand.cs" />
     <Compile Remove="Command\AddDeclarationSignatureCommand.cs" />
     <Compile Remove="Command\ApproveKYCRequisitionCommand.cs" />

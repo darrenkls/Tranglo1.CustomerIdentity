@@ -1,19 +1,11 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
 using Tranglo1.CustomerIdentity.IdentityServer.Command;
 using Tranglo1.CustomerIdentity.IdentityServer.CustomerUserList.Commands;
 using Tranglo1.CustomerIdentity.IdentityServer.DTO;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.BusinessProfile;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.CommentAndReviewRemarks;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.ComplianceOfficers;
 using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Declarations;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Documentation;
 using Tranglo1.CustomerIdentity.IdentityServer.DTO.KYCAdminManagement.AdminManagement;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.LicenseInformation;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration;
 using Tranglo1.CustomerIdentity.IdentityServer.Models;
 using Tranglo1.CustomerIdentity.IdentityServer.Queries;
 
@@ -33,23 +25,6 @@ namespace Tranglo1.CustomerIdentity.IdentityServer.Mappers
 			CreateMap<InviteePasswordVerificationViewModel, InviteePasswordVerificationCommand>();
 			CreateMap<UnlockUserInputDTO, UnlockUserCommand>();
 			CreateMap<LockUserInputDTO, LockUserCommand>();
-			//CreateMap<BusinessProfileInputDTO, CreateBusinessProfileCommand>();
-			CreateMap<BusinessProfileInputDTO, UpdateBusinessProfileCommand>()
-				.ForMember(dto => dto.ContactNumber, opt => opt.MapFrom(domain => domain.ContactNumber))
-				.ForMember(dto => dto.ContactNumberCountryISO2, opt => opt.MapFrom(domain => domain.ContactNumberCountryISO2))
-				.ForMember(dto => dto.DialCode, opt => opt.MapFrom(domain => domain.DialCode));
-			CreateMap<LicenseInformationInputDTO, SaveLicenseInformationCommand>();
-			CreateMap<LicenseInformationInputDTO, UpdateLicenseInformationCommand>();
-			//.AfterMap<RecaptchaTokenSetter>();
-			CreateMap<ComplianceOfficersInputDTO, SaveCoInformationCommand>()
-				.ForMember(dto => dto.ContactNum, opt => opt.MapFrom(domain => domain.ContactNumber))
-				.ForMember(dto => dto.ContactNumberCountryISO2, opt => opt.MapFrom(domain => domain.ContactNumberCountryISO2))
-				.ForMember(dto => dto.DialCode, opt => opt.MapFrom(domain => domain.DialCode));
-
-
-			CreateMap<ComplianceOfficersInputDTO, UpdateCoInformationCommand>();
-			CreateMap<CommentAndReviewRemarksInputDTO, SaveCommentsCommand>();
-			CreateMap<CommentAndReviewRemarksInputDTO, SaveReviewRemarksCommand>();
 			CreateMap<TrangloEntityBlockStatusInputDTO, UpdateTrangloStaffBlockStatusCommand>();
 			CreateMap<TrangloStaffUserUpdateInputDTO, UpdateTrangloStaffAssignmentCommand>();
 			CreateMap<VerifyCustomerUserEmailModel, VerifyCustomerUserEmailCommand>()
@@ -58,27 +33,7 @@ namespace Tranglo1.CustomerIdentity.IdentityServer.Mappers
 				mapping => mapping.MapFrom(
 					dto => Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(dto.Token))));
 
-			CreateMap<DeclarationsInputDTO, CreateDeclarationCommand>();
-
-			CreateMap<DeclarationsInputDTO, UpdateDeclarationInformationCommand>();
-			CreateMap<DocumentInfoInputDTO, UpdateDocumentInfoCommand>();
-			CreateMap<DocumentCategoryInfoInputDTO, UpdateDocumentCategoriesInfoCommand>();
-			CreateMap<PartnerRegistrationInputDTO, SavePartnerRegistrationCommand>();
 			CreateMap<ResendInvitationInputDTO, ResendInvitationCommand>();
-
-			CreateMap<PartnerAgreementStatusInputDTO, UpdatePartnerAgreementStatusCommand>();
-			CreateMap<SignedPartnerAgreementInputDTO, UpdateSignedPartnerAgreementCommand>();
-			CreateMap<HelloSignDocumentInputDTO, SaveHelloSignDocumentCommand>();
-			CreateMap<PartnerAPISettingsInputDTO, SavePartnerAPISettingsCommand>();
-			CreateMap<PartnerAPISettingsInputDTO, UpdateAPIPartnerSettingsCommand>();
-			CreateMap<WhitelistIPAddressInputDTO, SaveWhitelistIPAddressCommand>();
-			CreateMap<WhitelistIPAddressInputDTO, UpdatePendingWhitelistIPCommand>();
-			CreateMap<PartnerAPISettingsInputDTO, UpdatePendingConfigureCallbackURLCommand>();
-			//.ForMember(dto => dto.Staging, opt => opt.MapFrom(domain => domain.Staging))
-			//            .ForMember(dto => dto.Production, opt => opt.MapFrom(domain => domain.Production));
-			//CreateMap<PartnerAPISettingsInputDTO, PartnerAPISettings>();
-
-
 		}
 	}
 }

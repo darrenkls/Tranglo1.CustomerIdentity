@@ -20,7 +20,6 @@ using CSharpFunctionalExtensions;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Tranglo1.CustomerIdentity.IdentityServer.DTO.CustomerUser;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.BusinessProfile;
 using Tranglo1.CustomerIdentity.IdentityServer.Attributes;
 using Tranglo1.CustomerIdentity.IdentityServer.DTO.SignUpCode;
 using Tranglo1.CustomerIdentity.Domain.Events;
