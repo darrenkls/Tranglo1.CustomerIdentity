@@ -13,26 +13,20 @@
   <ItemGroup>
     <Compile Remove="Migrations\20201111165128_UpdateMigration.cs" />
     <Compile Remove="Migrations\20201111165128_UpdateMigration.Designer.cs" />
-    <!-- Phase 3: Onboarding persistence moved to Tranglo1.Onboarding.Infrastructure -->
-    <Compile Remove="Persistence\BusinessProfileDbContext.cs" />
-    <Compile Remove="Persistence\PartnerDBContext.cs" />
+    <!-- Phase 3: Onboarding persistence excluded (not needed by Identity) -->
     <Compile Remove="Persistence\ScreeningDBContext.cs" />
     <Compile Remove="Persistence\RBADBContext.cs" />
     <Compile Remove="Persistence\RBARequisitionDBContext.cs" />
     <Compile Remove="Persistence\KYCPartnerStatusRequisitionDbContext.cs" />
-    <!-- Phase 3: Onboarding entity type configurations -->
-    <Compile Remove="EntityTypeConfiguration\BusinessProfileEntityTypeConfiguration\**" />
-    <Compile Remove="EntityTypeConfiguration\PartnerEntityTypeConfiguration\**" />
+    <!-- Phase 3: Onboarding entity type configurations excluded (not needed by Identity) -->
     <Compile Remove="EntityTypeConfiguration\ScreeningEntityTypeConfiguration\**" />
     <Compile Remove="EntityTypeConfiguration\RBAEntityTypeConfiguration\**" />
     <Compile Remove="EntityTypeConfiguration\RequisitionEntityTypeConfiguration\**" />
     <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\**" />
-    <!-- Phase 3: Onboarding repositories -->
-    <Compile Remove="Repositories\BusinessProfileRepository.cs" />
-    <Compile Remove="Repositories\PartnerRepository.cs" />
+    <!-- Phase 3: Onboarding repositories excluded (not needed by Identity) -->
     <Compile Remove="Repositories\ScreeningRepository.cs" />
     <Compile Remove="Repositories\RBARepository.cs" />
-    <!-- Phase 3: Onboarding external services -->
+    <!-- Phase 3: Onboarding external services excluded (not needed by Identity) -->
     <Compile Remove="ExternalServices\ComplianceExternalService.cs" />
     <Compile Remove="ExternalServices\WatchlistNotificationExternalService.cs" />
   </ItemGroup>

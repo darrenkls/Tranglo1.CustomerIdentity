@@ -18,6 +18,8 @@ namespace Tranglo1.CustomerIdentity.Infrastructure.DependencyInjection
             services.AddScoped<ISignUpCodeRepository, SignUpCodeRepository>();
             services.AddScoped<IOtpRepository, OtpRepository>();
             services.AddScoped<ICountrySettingRepository, CountrySettingRepository>();
+            services.AddScoped<IBusinessProfileRepository, BusinessProfileRepository>();
+            services.AddScoped<IPartnerRepository, PartnerRepository>();
 
             // Cross-domain service (bridges Identity -> Onboarding via Contracts)
             services.AddScoped<IStaffEntityQueryService, StaffEntityQueryService>();
