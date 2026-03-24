@@ -429,7 +429,7 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
             services.TryAddScoped<ISecurityStampValidator, SecurityStampValidator<ApplicationUser>>();
             services.TryAddScoped<ITwoFactorSecurityStampValidator, TwoFactorSecurityStampValidator<ApplicationUser>>();
 
-            services.AddIdentityInfrastructure(Configuration, Environment);
+            services.AddIdentityInfrastructure();
 
             services.AddStorageManager(config =>
             {
