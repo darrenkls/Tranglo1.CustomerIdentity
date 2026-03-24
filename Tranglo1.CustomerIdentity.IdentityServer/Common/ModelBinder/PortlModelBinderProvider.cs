@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tranglo1.CustomerIdentity.IdentityServer.AspNetCore.ModelBinding;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Partner.PartnerRegistration;
 
 namespace Tranglo1.CustomerIdentity.IdentityServer.Common.ModelBinder
 {
