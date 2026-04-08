@@ -16,7 +16,6 @@ using Tranglo1.CustomerIdentity.Domain.DomainServices;
 using Tranglo1.CustomerIdentity.Domain.Entities;
 using Tranglo1.CustomerIdentity.Domain.Repositories;
 using Tranglo1.CustomerIdentity.IdentityServer.DTO.EmailNotification;
-using Tranglo1.CustomerIdentity.IdentityServer.DTO.Shareholder;
 using Tranglo1.CustomerIdentity.IdentityServer.Services.Notification;
 
 namespace Tranglo1.CustomerIdentity.IdentityServer.Command
