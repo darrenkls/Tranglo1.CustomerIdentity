@@ -17,6 +17,10 @@
     <Compile Remove="DTO\TrangloRole\ScreenAccessMainMenuOutputDTO.cs" />
     <Compile Remove="DTO\TrangloRole\ScreenAccessSubMenuOutputDTO.cs" />
     <Compile Remove="Services\Identity\ITrangloStaffContext.cs" />
+    <!-- Phase 4: Validator whose command was moved to Tranglo1.Onboarding.Application -->
+    <Compile Remove="Validations\SaveCommentsCommandValidator.cs" />
+    <!-- Phase 4: Design-time factory for DbContext moved to Tranglo1.Onboarding.Application -->
+    <Compile Remove="FactoryDesignTime\ScreeningTimeDbContextFactory.cs" />
     <!-- Phase 4: Onboarding DTOs moved to Tranglo1.Onboarding.Application -->
     <Compile Remove="DTO\AMLCFTQuestionnaire\**" />
     <Compile Remove="DTO\BusinessDeclaration\**" />
@@ -40,7 +44,7 @@
     <Compile Remove="DTO\ChangeCustomerTypeInputDTO.cs" />
     <Compile Remove="DTO\EntityListsOutputDTO.cs" />
     <Compile Remove="DTO\FileOutputDTO.cs" />
-    <Compile Remove="DTO\GetBusinessProfileListPerCustomerUserOutputDTO.cs" />
+
     <Compile Remove="DTO\GetKYCConnectUserSummaryDTO.cs" />
     <Compile Remove="DTO\KYCBusinessCategoriesOutputDTO.cs" />
     <Compile Remove="DTO\KYCConnectCategoriesOutputDTO.cs" />
@@ -69,7 +73,7 @@
     <Compile Remove="Queries\GetBusinessOnboardingStatusQuery.cs" />
     <Compile Remove="Queries\GetBusinessProfileIDTypeListQuery.cs" />
     <Compile Remove="Queries\GetBusinessProfileList.cs" />
-    <Compile Remove="Queries\GetBusinessProfileListPerCustomerUserQuery.cs" />
+
     <Compile Remove="Queries\GetBusinessProfilePendingKYCRequisitionQuery.cs" />
     <Compile Remove="Queries\GetBusinessProfileQuery.cs" />
     <Compile Remove="Queries\GetBusinessProfilesApproveHistoryQuery.cs" />
@@ -230,8 +234,7 @@
     <Compile Remove="Queries\GetVerificationStatusQuery.cs" />
     <Compile Remove="Queries\GetWatchlistStatusListQuery.cs" />
     <Compile Remove="Queries\GetWorkflowStatusListQuery.cs" />
-    <Compile Remove="Queries\PagedResultBase.cs" />
-    <Compile Remove="Queries\PaginationInfoDTO.cs" />
+
     <Compile Remove="Queries\ReviewRemarksCommentsDto.cs" />
     <Compile Remove="Queries\GetAdminTemplateList.cs" />
     <!-- Phase 4: Onboarding Mappers (only contain onboarding AutoMapper profiles) -->
