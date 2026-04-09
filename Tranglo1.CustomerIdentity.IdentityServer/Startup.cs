@@ -208,26 +208,6 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
                 options.EnableSensitiveDataLogging(true);
             }, ServiceLifetime.Transient);
 
-            services.AddDbContext<ScreeningDBContext>((provider, options) =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-                                     o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
-                options.EnableDetailedErrors(true);
-            });
-
-            services.AddDbContext<RBADBContext>((provider, options) =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-                                     o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
-                options.EnableDetailedErrors(true);
-            });
-
-            services.AddDbContext<RBARequisitionDBContext>((provider, options) =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-                                     o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
-                options.EnableDetailedErrors(true);
-            });
 
             services.AddDbContext<AuditLogDbContext>(options =>
             {
@@ -270,12 +250,6 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
                 options.EnableDetailedErrors(true);
             });
 
-            services.AddDbContext<KYCPartnerStatusRequisitionDbContext>((provider, options) =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-                                     o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
-                options.EnableDetailedErrors(true);
-            });
 
             services.AddDbContext<CountrySettingDbContext>((provider, options) =>
             {
@@ -592,7 +566,7 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
             services.AddScoped<BusinessProfileService>();
             services.AddScoped<ComplianceScreeningService>();
             services.AddScoped<PartnerService>();
-            services.AddScoped<IntegrationManager>();
+
             services.AddScoped<RBAService>();
             services.AddScoped<ApplicationUserService>();
             services.AddHttpContextAccessor();
@@ -657,36 +631,6 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
             });
 
 
-            services.AddDefaultApprovalManager<Domain.Entities.Requisition.PartnerKYCStatusRequisition>()
-                 .ConfigureApprovalWorkflowEngine<Domain.Entities.Requisition.PartnerKYCStatusRequisition>(approvalConfiguration =>
-                 {
-                     approvalConfiguration.MaxLevelRequired = 2;
-                     approvalConfiguration.AllowedToBypassLowerApprovalLevel = true;
-                     approvalConfiguration.IsLocked = false;
-                 }).AddUserIdentityContext<Managers.KYCApproval.RequisitionUserIdentityContext>()
-                 .AddDbContext<Domain.Entities.Requisition.PartnerKYCStatusRequisition, KYCPartnerStatusRequisitionDbContext>();
-
-
-            services.AddDefaultApprovalManager<Domain.Entities.RBAAggregate.Requisitions.RBARequisition>()
-                 .ConfigureApprovalWorkflowEngine<Domain.Entities.RBAAggregate.Requisitions.RBARequisition>(approvalConfiguration =>
-                 {
-                     approvalConfiguration.MaxLevelRequired = 1;
-                     approvalConfiguration.AllowedToBypassLowerApprovalLevel = true;
-                     approvalConfiguration.IsLocked = false;
-                 }).AddUserIdentityContext<Managers.KYCApproval.RequisitionUserIdentityContext>()
-                 .AddDbContext<Domain.Entities.RBAAggregate.Requisitions.RBARequisition, RBARequisitionDBContext>();
-
-
-            //services.AddDefaultApprovalManager<Managers.KYCApproval.PartnerKYCStatusRequisition>()
-            //    .ConfigureApprovalWorkflowEngine<Managers.KYCApproval.PartnerKYCStatusRequisition>(approvalConfiguration =>
-            //    {
-            //        approvalConfiguration.MaxLevelRequired = 2;
-            //        approvalConfiguration.AllowedToBypassLowerApprovalLevel = true;
-
-            //    }).AddUserIdentityContext<Managers.KYCApproval.RequisitionUserIdentityContext>()
-            //    .AddDbContext<>
-
-            //    });
 
             // Configure SignalR
             services.AddSignalR();
