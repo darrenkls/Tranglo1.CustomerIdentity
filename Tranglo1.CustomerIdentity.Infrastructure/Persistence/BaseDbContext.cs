@@ -59,6 +59,15 @@ namespace Tranglo1.CustomerIdentity.Infrastructure.Persistence
 			this._AggregateRoots = new List<EntityEntry<IAggregateRoot>>();
 		}
 
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			base.OnModelCreating(modelBuilder);
+			// DomainEvent is held in memory by aggregate roots and must never be mapped as an EF entity.
+			// Without this, EF's relationship discovery picks up IReadOnlyCollection<DomainEvent>
+			// on IAggregateRoot and throws "requires a primary key" at startup.
+			modelBuilder.Ignore<DomainEvent>();
+		}
+
 		protected void ClearDomainEvents()
 		{
 			this._PendingEvents.Clear();
