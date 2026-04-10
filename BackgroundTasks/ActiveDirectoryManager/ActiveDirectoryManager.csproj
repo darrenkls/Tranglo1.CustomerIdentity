@@ -4,13 +4,6 @@
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 	</PropertyGroup>
 
-
-	<ItemGroup>
-	  <Content Include="ldap.cer">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
-	</ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="Amazon.Extensions.Configuration.SystemsManager" Version="3.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />

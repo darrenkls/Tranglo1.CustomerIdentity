@@ -38,19 +38,8 @@ namespace ActiveDirectoryManager.Jobs
 			{
 				string searchFilter = $"(&(objectCategory=person)(objectClass=user))";
 
-				//load the self signed cert from LDAP server
-				var TRGRAD01OFPRD = System.Security.Cryptography.X509Certificates.X509Certificate2.CreateFromCertFile("ldap.cer");
-				var X5092 = new System.Security.Cryptography.X509Certificates.X509Certificate2(TRGRAD01OFPRD);
-
 				var ldapOptions = new LdapConnectionOptions();
-				ldapOptions.UseSsl().ConfigureRemoteCertificateValidationCallback((sender, cert, chain, sslPolicyErrors) =>
-				{
-					chain.ChainPolicy.ExtraStore.Clear();
-					chain.ChainPolicy.ExtraStore.Add(X5092);
-					var valid = chain.Build(cert as System.Security.Cryptography.X509Certificates.X509Certificate2);
-					
-					return true;
-				});
+				ldapOptions.UseSsl();
 
 				using (var connection = new Novell.Directory.Ldap.LdapConnection(ldapOptions))
 				{
