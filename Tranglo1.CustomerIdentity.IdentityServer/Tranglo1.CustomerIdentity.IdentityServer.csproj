@@ -59,7 +59,6 @@
     <Compile Remove="Queries\GetAMLCFTQuestionnaireListQuery.cs" />
     <Compile Remove="Queries\GetActionOperationQuery.cs" />
     <Compile Remove="Queries\GetAffiliateAndSubsidiaryByIdQuery.cs" />
-    <Compile Remove="Queries\GetAllBusinessProfilesQuery.cs" />
     <Compile Remove="Queries\GetAllEnvironmentsAPIURLQuery.cs" />
     <Compile Remove="Queries\GetAllExternalPartnerSubscriptionsQuery.cs" />
     <Compile Remove="Queries\GetAllPartnerSubscriptionQuery.cs" />
@@ -96,7 +95,6 @@
     <Compile Remove="Queries\GetCreatedByQuery.cs" />
     <Compile Remove="Queries\GetCustomerBusinessDeclarationDetailsQuery.cs" />
     <Compile Remove="Queries\GetCustomerBusinessDeclarationQuery.cs" />
-    <Compile Remove="Queries\GetCustomerRegisteredCountryByBusinessProfileCodeQuery.cs" />
     <Compile Remove="Queries\GetCustomerVerificationByBusinessProfileCodeQuery.cs" />
     <Compile Remove="Queries\GetCustomerVerificationDocumentDetailsQuery.cs" />
     <Compile Remove="Queries\GetCustomerVerificationDocumentThumbnailDetailsQuery.cs" />
@@ -132,7 +130,6 @@
     <Compile Remove="Queries\GetKYCBusinessCategoriesQuery.cs" />
     <Compile Remove="Queries\GetKYCBusinessUserSummaryByCodeQuery.cs" />
     <Compile Remove="Queries\GetKYCCategoriesStatusesQuery.cs" />
-    <Compile Remove="Queries\GetKYCComplianceOfficerQuery.cs" />
     <Compile Remove="Queries\GetKYCConnectCategoriesQuery.cs" />
     <Compile Remove="Queries\GetKYCConnectUserSummary.cs" />
     <Compile Remove="Queries\GetKYCCustomerSummaryFeedbackByBusinessProfileQuery.cs" />
@@ -169,7 +166,6 @@
     <Compile Remove="Queries\GetPartnerAgreementTemplatesQuery.cs" />
     <Compile Remove="Queries\GetPartnerDetailsByPartnerCodeQuery.cs" />
     <Compile Remove="Queries\GetPartnerGoLiveIsProcessedQuery.cs" />
-    <Compile Remove="Queries\GetPartnerInviteSolutionByBusinessProfileCodeQuery.cs" />
     <Compile Remove="Queries\GetPartnerListingExportQuery.cs" />
     <Compile Remove="Queries\GetPartnerListingQuery.cs" />
     <Compile Remove="Queries\GetPartnerListingSearchResultQuery.cs" />
@@ -181,12 +177,7 @@
     <Compile Remove="Queries\GetPartnerRegistrationLeadsOriginsQuery.cs" />
     <Compile Remove="Queries\GetPartnerSubscriptionListQuery.cs" />
     <Compile Remove="Queries\GetPartnerTypeQuery.cs" />
-    <Compile Remove="Queries\GetPartnerUserDetailsAdminQuery.cs" />
-    <Compile Remove="Queries\GetPartnerUserDetailsCustomerQuery.cs" />
     <Compile Remove="Queries\GetPartnerUserEmailQuery.cs" />
-    <Compile Remove="Queries\GetPartnerUserListAdminQuery.cs" />
-    <Compile Remove="Queries\GetPartnerUserListCustomerQuery.cs" />
-    <Compile Remove="Queries\GetPartnerUserTrangloEntityQuery.cs" />
     <Compile Remove="Queries\GetPartnerWorkflowStatusQuery.cs" />
     <Compile Remove="Queries\GetPoliticallyExposedPersonByIdQuery.cs" />
     <Compile Remove="Queries\GetPrimaryOfficerByIdQuery.cs" />
@@ -222,11 +213,8 @@
     <Compile Remove="Queries\GetTermsAndConditionsAcceptanceStatusQuery.cs" />
     <Compile Remove="Queries\GetTitlesQuery.cs" />
     <Compile Remove="Queries\GetTradeNameListBySolutionQuery.cs" />
-    <Compile Remove="Queries\GetTrangloBusinessDevelopmentStaffQuery.cs" />
     <Compile Remove="Queries\GetTrangloDepartmentListQuery.cs" />
     <Compile Remove="Queries\GetTrangloEntityListQuery.cs" />
-    <Compile Remove="Queries\GetTrangloProductStaffQuery.cs" />
-    <Compile Remove="Queries\GetTrangloSalesOperationStaffQuery.cs" />
     <Compile Remove="Queries\GetTransactionEvaluationByIdQuery.cs" />
     <Compile Remove="Queries\GetUltimateBeneficialOwnersByCode.cs" />
     <Compile Remove="Queries\GetVerificationIDTypeQuery.cs" />
@@ -249,8 +237,6 @@
     <Compile Remove="Command\CheckQuestionnaireStructureCommand.cs" />
     <Compile Remove="Command\CreateBusinessUserDeclarationCommand.cs" />
     <Compile Remove="Command\CreateDeclarationCommand.cs" />
-    <Compile Remove="Command\CustomerUserBusinessProfileAccountStatusCommand.cs" />
-    <Compile Remove="Command\CustomerUserBusinessProfileBlockStatusCommand.cs" />
     <Compile Remove="Command\DeleteAMLCFTDisplayRuleCommand.cs" />
     <Compile Remove="Command\DeleteBusinessUserDeclarationSignatureCommand.cs" />
     <Compile Remove="Command\DeleteCOSignatureCommand.cs" />
@@ -259,7 +245,6 @@
     <Compile Remove="Command\DeleteDeclarationSignatureCommand.cs" />
     <Compile Remove="Command\DeleteDocumentsUploadByDocIdCommand.cs" />
     <Compile Remove="Command\EditUpdateComplianceInternalRiskRequisitionCommand.cs" />
-    <Compile Remove="Command\KYCUnSubscriptionCommand.cs" />
     <Compile Remove="Command\MarkKYCSummaryNotificationsAsReadCommand.cs" />
     <Compile Remove="Command\NotifyKYCUserCommand.cs" />
     <Compile Remove="Command\NotifyWatchlistUserCommand.cs" />
@@ -333,8 +318,6 @@
     <Compile Remove="Command\UpdatePartnerApiSettingsCommand.cs" />
     <Compile Remove="Command\UpdatePartnerApiSettingsConfirmWhitelistCommand.cs" />
     <Compile Remove="Command\UpdatePartnerApiSettingsUserCommand.cs" />
-    <Compile Remove="Command\UpdatePartnerDetailsAdminCommand.cs" />
-    <Compile Remove="Command\UpdatePartnerDetailsCustomerCommand.cs" />
     <Compile Remove="Command\UpdatePartnerOnboardingCommand.cs" />
     <Compile Remove="Command\UpdatePartnerRegistrationCommand.cs" />
     <Compile Remove="Command\UpdatePartnerTermsAndConditionsAcceptanceDateCommand.cs" />

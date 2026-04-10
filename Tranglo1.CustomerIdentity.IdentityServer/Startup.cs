@@ -56,7 +56,6 @@ using Tranglo1.CustomerIdentity.IdentityServer.Extensions;
 using Tranglo1.CustomerIdentity.IdentityServer.Hubs;
 using Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Persistance;
 using Tranglo1.CustomerIdentity.IdentityServer.Infrastructure.Swagger;
-using Tranglo1.CustomerIdentity.IdentityServer.Managers;
 using Tranglo1.CustomerIdentity.IdentityServer.Providers;
 using Tranglo1.CustomerIdentity.IdentityServer.Security;
 using Tranglo1.CustomerIdentity.IdentityServer.Services;
@@ -567,7 +566,6 @@ namespace Tranglo1.CustomerIdentity.IdentityServer
             services.AddScoped<ComplianceScreeningService>();
             services.AddScoped<PartnerService>();
 
-            services.AddScoped<RBAService>();
             services.AddScoped<ApplicationUserService>();
             services.AddHttpContextAccessor();
 

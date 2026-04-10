@@ -47,8 +47,7 @@ namespace Tranglo1.CustomerIdentity.Domain.DomainServices
             ISignUpCodeRepository signUpCodeRepository,
             IExternalUserRoleRepository externalUserRoleRepository,
             IConfiguration config,
-            ILogger<BusinessProfileService> logger,
-              RBAService rbaService
+            ILogger<BusinessProfileService> logger
             )
         {
             this._partnerRepository = partnerRepository;
