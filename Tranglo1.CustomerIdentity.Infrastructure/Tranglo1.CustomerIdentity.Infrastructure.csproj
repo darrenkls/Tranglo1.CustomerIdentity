@@ -22,7 +22,27 @@
     <Compile Remove="EntityTypeConfiguration\ScreeningEntityTypeConfiguration\**" />
     <Compile Remove="EntityTypeConfiguration\RBAEntityTypeConfiguration\**" />
     <Compile Remove="EntityTypeConfiguration\RequisitionEntityTypeConfiguration\**" />
-    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\**" />
+    <!-- Phase 3: MetaEntityTypeConfiguration — exclude only pure onboarding/screening entities.
+         Configurations for entities used by active Identity DbContexts (ApplicationUserDbContext,
+         PartnerDBContext, CountrySettingDbContext, SignUpCodeDBContext, ExternalUserRoleDbContext)
+         must remain compiled so ApplyConfigurationsFromAssembly applies the correct schema/table mappings. -->
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\ApprovalStatusEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\BusinessProfileIDTypeEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\ComplianceRequisitionTypeEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\ComplianceSettingEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\KYCReminderSubscriptionEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\OwnershipStructureTypeEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\RiskRankingEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\RiskScoreEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\RiskTypeEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\ScreeningDetailsCategoryEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\ScreeningEntityTypeEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\ScreeningListSourceEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\SubmissionResultEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\VerificationIDTypeEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\VerificationIDTypeSectionEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\VerificationStatusEntityTypeConfiguration.cs" />
+    <Compile Remove="EntityTypeConfiguration\MetaEntityTypeConfiguration\WatchlistStatusEntityTypeConfiguration.cs" />
     <!-- Phase 3: Onboarding repositories excluded (not needed by Identity) -->
     <Compile Remove="Repositories\ScreeningRepository.cs" />
     <Compile Remove="Repositories\RBARepository.cs" />
